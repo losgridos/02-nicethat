@@ -5,26 +5,47 @@ body {
   // background-color: green;
 }
 
+
+// General Grid / 1 col + 1.5rem margins
+// --------------------------------------------------
 .grid {
   margin: 0px auto; //centered grid
   display: grid;
   grid-template-columns:
   [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end];
-  grid-template-rows:
-  [navbar] 9rem [content-start] 1fr;
 }
 
-nav {
-  grid-column: full-start / full-end;
-  margin-bottom: 1.5rem;
-}
 
+// Content Grid / inside the general grid
+// --------------------------------------------------
 main {
   grid-column: content-start / content-end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [navbar] 9rem [content] 1fr;
+
+  @include respond(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond(desktop) {
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 21.5rem);
+  }
+}
+// Navbar is inside content
+main nav {
+    grid-row: 1 / span 1;
+   @include respond(tablet) {
+    grid-column: 1 / span 2
+  }
+
+  @include respond(desktop) {
+    grid-column: 1 / span 5
+  }
 }
 
-
-// Grid Fix
+// Full Grid Fix
 // To get background-color in 100% width but <element> content in center layout
 //
 // .<element>:before{
