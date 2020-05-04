@@ -1,4 +1,7 @@
-# Sass Boilerplate
+# It´s Nice That Clone
+Personal project to learn, test and improve my html, css & vanilla JavaScript knowledge.
+
+I am using my Sass Boilerplate, feel free to use it is you want ;) 
 
 Starting code for a sass static site. Contains:
 
