@@ -195,9 +195,5 @@ nav {
 .u-text-center {
   text-align: center; }
 
-.hidden {
+.u-hidden {
   display: none; }
-
-.show {
-  display: flex;
-  flex-wrap: wrap; }
