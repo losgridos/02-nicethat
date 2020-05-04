@@ -148,6 +148,7 @@ nav {
   margin-bottom: .2rem; }
 
 .tag:hover {
+  cursor: pointer;
   background-color: #e4defc; }
 
 .tag-icon {
