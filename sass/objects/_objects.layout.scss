@@ -1,0 +1,41 @@
+// --------------------------------------------------
+// #Layout / with Css Grids
+// --------------------------------------------------
+body {
+  // background-color: green;
+}
+
+.grid {
+  margin: 0px auto; //centered grid
+  display: grid;
+  grid-template-columns:
+  [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end];
+  grid-template-rows:
+  [navbar] 9rem [content-start] 1fr;
+}
+
+nav {
+  grid-column: full-start / full-end;
+  margin-bottom: 1.5rem;
+}
+
+main {
+  grid-column: content-start / content-end;
+}
+
+
+// Grid Fix
+// To get background-color in 100% width but <element> content in center layout
+//
+// .<element>:before{
+//   content: "";
+//   z-index: -1;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: -100vw;
+//   right: -100vw;
+//   background:inherit;
+// }
+
+

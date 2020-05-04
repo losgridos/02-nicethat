@@ -1,0 +1,14 @@
+// --------------------------------------------------
+// #Links basic styling
+// --------------------------------------------------
+
+a:link {
+  color: $color-black;
+  text-decoration: none;
+}
+
+a:visited {color: $color-black;}
+
+a:hover {color: $color-primary;}
+
+a:active {color: $color-primary;}

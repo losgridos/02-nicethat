@@ -1,0 +1,43 @@
+nav {
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: $color-white;
+  z-index: 1000;
+}
+
+
+.logo {
+  margin-right: auto;
+  // background-color: green;
+}
+
+.logo a:hover{
+  color: $color-black;
+}
+
+.search-icon {
+  margin-right: 1.5rem;
+  font-size: 2.8rem;
+  cursor: pointer;
+  // background-color: green;
+
+}
+
+.burger-icon {
+  z-index: 1030;
+  display: block;
+  cursor: pointer;
+  padding-bottom: 0.6rem;
+  // background-color: red;
+}
+
+.burger-icon div {
+  height: 0.2rem;
+  width: 2.7rem;
+  margin-top: 0.6rem;
+  background-color: $color-black;
+  transition: all 0.3s ease; // for later animation
+}
+
