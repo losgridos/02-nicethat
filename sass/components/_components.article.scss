@@ -8,7 +8,7 @@
   padding-bottom: 2rem;
   background-color: $color-white;
   // background-color: yellow;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .article img {
@@ -32,15 +32,15 @@
 // Grid Position / articles / HEADER
 // --------------------------------------------------
 .header-item1 {
-  grid-row-end: span 56;
+
 
   @include respond(tablet) {
     grid-column: 1 / span 2;
-    grid-row-end: span 82;
+
   }
   @include respond(desktop) {
     grid-column: 1 / span 3;
-    grid-row-end: span 60;
+
 
     position: sticky;
     top: 0px;
@@ -48,64 +48,64 @@
 }
 
 .header-item2 {
-  grid-row-end: span 69;
+
 
   @include respond(tablet) {
     grid-column: 1 / span 1;
-    grid-row-end: span 70;
+
 
   }
   @include respond(desktop) {
     grid-column: 4 / span 1;
-    grid-row-end: span 45;
+
   }
 }
 
 .header-item3 {
-  grid-row-end: span 94;
+
   @include respond(tablet) {
     grid-column: 2 / span 1;
-    grid-row-end: span 85;
+
   }
   @include respond(desktop) {
     grid-column: 5 / span 1;
-    grid-row-end: span 58;
+
   }
 }
 
 .header-item4 {
-  grid-row-end: span 55;
+
   @include respond(tablet) {
     grid-column: 1 / span 1;
-    grid-row-end: span 54;
+
   }
   @include respond(desktop) {
     grid-column: 4 / span 1;
-    grid-row-end: span 50;
+
   }
 }
 
 .header-item5 {
-  grid-row-end: span 93;
+
   @include respond(tablet) {
     grid-column: 2 / span 1;
-    grid-row-end: span 78;
+
   }
   @include respond(desktop) {
     grid-column: 5 / span 1;
-    grid-row-end: span 70;
+
   }
 }
 
 .header-item6 {
   @include respond(tablet) {
     grid-column: 1 / span 2;
-    grid-row-end: span 82;
+
   }
   @include respond(desktop) {
     grid-column: 4 / span 2;
-    grid-row-end: span 54;
-    // margin-top: -2rem;
+    margin-top: -3.5rem;
+
   }
 }
 
