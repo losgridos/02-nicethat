@@ -29,6 +29,10 @@ function hideAndShow(event) {
   // 4
   tagBtn.remove();
 }
-  // 1
-  let parentContainer = document.querySelector('main');
-  parentContainer.addEventListener('click', hideAndShow);
+  // 1 // first <main> --> class .header
+  let parentContainerHeader = document.querySelector('.main-header');
+  parentContainerHeader.addEventListener('click', hideAndShow);
+
+  // 1 // second <main>
+  let parentContainerMain = document.querySelectorAll('main')[1];
+  parentContainerMain.addEventListener('click', hideAndShow);
