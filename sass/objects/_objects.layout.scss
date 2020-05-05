@@ -9,18 +9,26 @@ body {
 // General GRID / 1 col + 1.5rem margins
 // --------------------------------------------------
 .grid {
+  // position: relative;
+  // overflow: hidden;
   margin: 0px auto; //centered grid
   display: grid;
   grid-template-columns:
-  [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end];
-  grid-template-rows:[navbar] 9rem [header] 1fr [gap] 10rem [content] 1fr;
+  [full-start] 1.5rem [content-start] 1fr [content-end] 0rem [full-end];
+  grid-template-rows:[navbar] 9rem [header] min-content [gap] 1.5rem [content] min-content
+  [gap] 5rem [newsletter] 500px;
+
+  // @include respond(tablet) {
+  //   grid-template-rows:[navbar] 9rem [header] min-content [gap] 8rem [content] min-content
+  // [gap] 1.5rem [newsletter] 500px;
+  // }
  }
 
  // <nav> element / inside GRID
  // --------------------------------------------------
 nav {
   grid-column: content-start / content-end;
-  grid-row: 1 / span 1;
+  grid-row: navbar / span 1;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -40,7 +48,7 @@ nav {
 // --------------------------------------------------
 .main-header {
   grid-column: content-start / content-end;
-  grid-row: 2 / span 1;
+  grid-row: header / span 1;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -62,7 +70,7 @@ nav {
 // --------------------------------------------------
 main {
   grid-column: content-start / content-end;
-  grid-row: 4 / span 1;
+  grid-row: content / span 1;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -78,11 +86,30 @@ main {
   }
 }
 
+.newsletter {
+  position: relative;
+  grid-column: content-start / content-end;
+  grid-row: newsletter / span 1;
+  background-color: green;
+}
+
+.newsletter:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100vw;
+  right: -100vw;
+  background:inherit;
+}
+
 
 
 
 
 // Full Grid Fix
+// .<element> muss be position: relative;
 // To get background-color in 100% width but <element> content in center layout
 //
 // .<element>:before{
