@@ -1,6 +1,6 @@
 // 1
 // The tag-btn make an event delegation with the parent container
-// of the article <main>. The event-target is on the tag-icon css class.
+// of the article <main>. The event-target is on the "js-tag-btn" css class.
 //
 // 2
 // The tags we want to show are inside the tag-icon with a "u-hidden" class
@@ -13,6 +13,10 @@
 //
 // 4
 // at the end, we remove the tagBtn.
+//
+// 5
+// We select all mains (the parent element), convert them into an array and
+// iterate over them with the addEventListener.
 
 function hideAndShow(event) {
   // 1
@@ -29,10 +33,22 @@ function hideAndShow(event) {
   // 4
   tagBtn.remove();
 }
-  // 1 // first <main> --> class .header
-  let parentContainerHeader = document.querySelector('.main-header');
-  parentContainerHeader.addEventListener('click', hideAndShow);
 
-  // 1 // second <main>
-  let parentContainerMain = document.querySelectorAll('main')[1];
-  parentContainerMain.addEventListener('click', hideAndShow);
+let mains = document.querySelectorAll('main');
+let mainsArray = Array.from(mains);
+
+mainsArray.forEach(main => {
+  main.addEventListener('click', hideAndShow);
+});
+
+
+
+
+
+
+
+
+
+
+
+
