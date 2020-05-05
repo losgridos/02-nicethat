@@ -1,10 +1,23 @@
+// Articles (Cards)
+// --------------------------------------------------
 .article {
+  //position: relative;
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 2rem;
   padding-bottom: 4.5rem;
   background-color: $color-white;
+
+    //     a::after {
+    // content: '';
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // }
+
 }
 
 .article img {
@@ -19,3 +32,81 @@
   margin-top: 2rem;
   color: $color-grey;
 }
+
+.article--selected {
+  @include respond(tablet) { grid-column: span 2;}
+}
+
+// .article--selected-fixed {
+//   position: sticky;
+//   top: 0px;
+
+//   @include respond(tablet) { grid-column: span 2;}
+//   @include respond(desktop) { grid-column: span 3;}
+// }
+
+
+
+// Grid Position / articles / HEADER
+// --------------------------------------------------
+.header-item1 {
+  @include respond(tablet) { grid-column: span 2;}
+  @include respond(desktop) {
+    grid-column: 1 / span 3;
+    grid-row-end: span 60;
+
+    position: sticky;
+    top: 0px;
+  }
+}
+
+.header-item2 {
+  @include respond(tablet) { grid-column: span 1;}
+  @include respond(desktop) {
+    grid-column: 4 / span 1;
+    grid-row-end: span 45;
+  }
+}
+
+.header-item3 {
+  @include respond(tablet) { grid-column: span 1;}
+  @include respond(desktop) {
+    grid-column: 5 / span 1;
+    grid-row-end: span 58;
+  }
+}
+
+.header-item4 {
+  @include respond(tablet) { grid-column: span 1;}
+  @include respond(desktop) {
+    grid-column: 4 / span 1;
+    grid-row-end: span 50;
+  }
+}
+
+.header-item5 {
+  @include respond(tablet) { grid-column: span 1;}
+  @include respond(desktop) {
+    grid-column: 5 / span 1;
+    grid-row-end: span 70;
+  }
+}
+
+.header-item6 {
+  @include respond(tablet) { grid-column: span 2;}
+  @include respond(desktop) {
+    grid-column: 4 / span 2;
+    grid-row-end: span 54;
+    // margin-top: -2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
