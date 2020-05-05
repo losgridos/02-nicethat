@@ -278,5 +278,8 @@ main {
   padding-top: .8rem;
   max-height: 2.5rem; }
 
+.u-text-center {
+  text-align: center; }
+
 .u-hidden {
   display: none; }
