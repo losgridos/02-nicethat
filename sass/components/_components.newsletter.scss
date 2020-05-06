@@ -6,19 +6,82 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 5rem;
+  padding-bottom: 5rem;
 
   @include respond(tablet) {
     padding-left: 4rem;
     padding-right: 4rem;
   }
+  @include respond(desktop) { padding-right: 8rem; }
 }
 
 .newsletter-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   color: $color-black;
 }
 
 .newsletter-content {
-  margin-bottom: 2.5rem;
-
+  margin-bottom: 3.5rem;
 }
+
+.newsletter-img {
+  display: none;
+  grid-column: 2 / span 1;
+
+  width: 100%;
+
+  @include respond(desktop) {
+    display: block;
+  }
+}
+
+
+.newsletter-form input {
+  display: block;
+  height: 5rem;
+  width: 100%;
+  border: none;
+}
+
+
+.newsletter-form input:focus {
+  outline: none;
+}
+
+.newsletter-form input[type=text] {
+  padding-left: 2rem;
+  margin-bottom: 4rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+  border-radius: .2rem;
+  color: $color-grey-dark;
+}
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form input[type="checkbox"] {
+  -webkit-appearance: none;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  background-color: $color-white;
+  border: none;
+  border-radius: .2rem;
+}
+
+.newsletter-form label {
+  font-size: 1.3rem;
+  // font-weight: 300;
+  letter-spacing: .5px;
+  color: $color-black;
+}
+
+
+
