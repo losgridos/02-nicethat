@@ -275,10 +275,14 @@ body {
 .newsletter-content {
   margin-bottom: 3.5rem; }
 
+.newsletter-img-container {
+  overflow: hidden; }
+
 .newsletter-img {
   display: none;
   grid-column: 2 / span 1;
-  width: 100%; }
+  width: 100%;
+  transform: scale(1.1); }
   @media only screen and (min-width: 69em) {
     .newsletter-img {
       display: block; } }
@@ -360,6 +364,9 @@ body {
 
 .newsletter-form button:focus {
   outline: none; }
+
+.newsletter-form button:visited {
+  background-color: #0998e9; }
 
 .u-text-center {
   text-align: center; }

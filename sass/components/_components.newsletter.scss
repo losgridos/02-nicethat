@@ -4,9 +4,7 @@
 
 .newsletter {
   grid-column: span 1;
-
   width: 100%;
-
   padding-left: 1.5rem;
   padding-top: 5rem;
   padding-right: 1.5rem;
@@ -28,11 +26,16 @@
   margin-bottom: 3.5rem;
 }
 
+.newsletter-img-container {
+  overflow: hidden;
+}
+
 .newsletter-img {
   display: none;
   grid-column: 2 / span 1;
 
   width: 100%;
+  transform: scale(1.1);
 
   @include respond(desktop) { display: block }
 }
@@ -126,3 +129,5 @@
 .newsletter-form button:hover { background-color: darken($color-tertiary-2, 15%); }
 
 .newsletter-form button:focus { outline: none; }
+
+.newsletter-form button:visited {background-color: darken($color-tertiary-2, 15%);}
