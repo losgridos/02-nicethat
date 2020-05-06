@@ -1,6 +1,7 @@
 // Articles (Cards)
 // --------------------------------------------------
 .article {
+  grid-column: span 1;
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -28,86 +29,106 @@
   @include respond(tablet) { grid-column: span 2;}
 }
 
-
-// Grid Position / articles / HEADER
-// --------------------------------------------------
-.header-item1 {
-
-
-  @include respond(tablet) {
-    grid-column: 1 / span 2;
-
-  }
+.article--selected-fixed {
+  @include respond(tablet) { grid-column: span 2 }
   @include respond(desktop) {
-    grid-column: 1 / span 3;
-
-
+    grid-column: span 3;
     position: sticky;
     top: 0px;
   }
 }
 
-.header-item2 {
-
-
-  @include respond(tablet) {
-    grid-column: 1 / span 1;
-
-
-  }
-  @include respond(desktop) {
-    grid-column: 4 / span 1;
-
-  }
+.article-selected-right {
+  @include respond(desktop) { grid-column: col4 / span 2 }
 }
 
-.header-item3 {
-
-  @include respond(tablet) {
-    grid-column: 2 / span 1;
-
-  }
-  @include respond(desktop) {
-    grid-column: 5 / span 1;
-
-  }
+.article-right {
+  @include respond(desktop) { grid-column: col4 }
 }
 
-.header-item4 {
-
-  @include respond(tablet) {
-    grid-column: 1 / span 1;
-
-  }
-  @include respond(desktop) {
-    grid-column: 4 / span 1;
-
-  }
+.article-mt-fix {
+  margin-top: -3.5rem;
 }
 
-.header-item5 {
+// Grid Position / articles / HEADER
+// --------------------------------------------------
+// .header-item1 {
+//    grid-column: 1 / span 1;
 
-  @include respond(tablet) {
-    grid-column: 2 / span 1;
+//   @include respond(tablet) {
+//     grid-column: 1 / span 2;
 
-  }
-  @include respond(desktop) {
-    grid-column: 5 / span 1;
+//   }
+//   @include respond(desktop) {
+//     grid-column: 1 / span 3;
 
-  }
-}
 
-.header-item6 {
-  @include respond(tablet) {
-    grid-column: 1 / span 2;
+//     position: sticky;
+//     top: 0px;
+//   }
+// }
 
-  }
-  @include respond(desktop) {
-    grid-column: 4 / span 2;
-    margin-top: -3.5rem;
+// .header-item2 {
 
-  }
-}
+
+//   @include respond(tablet) {
+//     grid-column: 1 / span 1;
+
+
+//   }
+//   @include respond(desktop) {
+//     grid-column: 4 / span 1;
+
+//   }
+// }
+
+// .header-item3 {
+
+//   @include respond(tablet) {
+//     grid-column: 2 / span 1;
+
+//   }
+//   @include respond(desktop) {
+//     grid-column: 5 / span 1;
+
+//   }
+// }
+
+// .header-item4 {
+
+//   @include respond(tablet) {
+//     grid-column: 1 / span 1;
+
+//   }
+//   @include respond(desktop) {
+//     grid-column: 4 / span 1;
+
+//   }
+// }
+
+// .header-item5 {
+
+//   @include respond(tablet) {
+//     grid-column: 2 / span 1;
+
+//   }
+//   @include respond(desktop) {
+//     grid-column: 5 / span 1;
+
+//   }
+// }
+
+// .header-item6 {
+//   @include respond(tablet) {
+//     grid-column: 1 / span 2;
+
+//   }
+//   @include respond(desktop) {
+//     grid-column: 4 / span 2;
+//     margin-top: -3.5rem;
+
+//   }
+// }
 
 
 

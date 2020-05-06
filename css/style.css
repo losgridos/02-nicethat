@@ -13,7 +13,8 @@ html {
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
   font-weight: 400;
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: #2b2b2b; }
 
 h2,
 h3,
@@ -26,7 +27,8 @@ h6 {
 
 p {
   font-family: 'Roboto Slab', serif;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #2b2b2b; }
 
 h2 {
   font-size: 2.8rem; }
@@ -62,15 +64,15 @@ h6 {
   line-height: 1.6rem; }
 
 p {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 2.5rem;
-  line-height: 2.7rem; }
+  line-height: 2.5rem; }
   @media only screen and (min-width: 48.1em) {
     p {
-      font-size: 1.8rem; } }
+      font-size: 2rem; } }
   @media only screen and (min-width: 69em) {
     p {
-      font-size: 1.7rem; } }
+      font-size: 1.9rem; } }
 
 a:link {
   color: #2b2b2b;
@@ -95,63 +97,44 @@ body {
 .grid {
   margin: 0px auto;
   display: grid;
-  grid-template-columns: [full-start] 1.5rem [content-start] 1fr [content-end] 0rem [full-end];
-  grid-template-rows: [navbar] 9rem [header] min-content [gap] 0rem [content] min-content [gap] 5rem [newsletter] 500px; }
-
-@media only screen and (min-width: 69em) {
-  grid-template-rows: [navbar] 9rem [header] min-content [gap] 5rem [content] min-content [gap] 5rem [newsletter] min-content; }
-
-nav {
-  grid-column: content-start / content-end;
-  grid-row: navbar / span 1;
-  display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end]; }
   @media only screen and (min-width: 48.1em) {
-    nav {
-      grid-template-columns: 1fr 1fr; } }
+    .grid {
+      grid-template-columns: [full-start] 1.5rem [content-start] 1fr [col2] 1fr [content-end] 1.5rem [full-end]; } }
   @media only screen and (min-width: 69em) {
-    nav {
-      margin: 0 auto;
-      grid-template-columns: repeat(5, 21.5rem); } }
+    .grid {
+      grid-template-columns: [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end] 1fr [full-end]; } }
 
-.main-header {
+.navbar-grid-item {
+  grid-column: content-start / content-end; }
+
+.article-grid-item {
   grid-column: content-start / content-end;
-  grid-row: header / span 1;
   display: grid;
-  grid-template-columns: 1fr; }
+  grid-template-columns: [content-start] 1fr [content-end]; }
   @media only screen and (min-width: 48.1em) {
-    .main-header {
-      grid-template-columns: 1fr 1fr; } }
+    .article-grid-item {
+      grid-template-columns: [content-start] 1fr [col2] 1fr [content-end]; } }
   @media only screen and (min-width: 69em) {
-    .main-header {
-      margin: 0 auto;
-      grid-template-columns: repeat(5, 21.5rem); } }
+    .article-grid-item {
+      grid-template-columns: [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end]; } }
 
-main {
-  grid-column: content-start / content-end;
-  grid-row: content / span 1;
-  display: grid;
-  grid-template-columns: 1fr; }
-  @media only screen and (min-width: 48.1em) {
-    main {
-      grid-template-columns: 1fr 1fr; } }
-  @media only screen and (min-width: 69em) {
-    main {
-      margin: 0 auto;
-      grid-template-columns: repeat(5, 21.5rem); } }
-
-.full-width {
+.full-width-container {
   position: relative;
+  margin-top: 5rem;
   grid-column: content-start / content-end;
-  grid-row: newsletter / span 1;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #f7bfa0; }
+  background-color: #fdf2da; }
   @media only screen and (min-width: 48.1em) {
-    .full-width {
+    .full-width-container {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem; } }
+  @media only screen and (min-width: 69em) {
+    .full-width-container {
       grid-template-columns: 1fr 1fr; } }
 
-.full-width:before {
+.full-width-container:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -160,8 +143,12 @@ main {
   left: -100vw;
   right: -100vw;
   background: inherit; }
+  @media only screen and (min-width: 48.1em) {
+    .full-width-container:before {
+      display: none; } }
 
 .navbar {
+  height: 9rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -169,12 +156,6 @@ main {
   padding-right: 1.5rem;
   background-color: #ffffff;
   z-index: 1000; }
-  @media only screen and (min-width: 48.1em) {
-    .navbar {
-      grid-column: span 2; } }
-  @media only screen and (min-width: 69em) {
-    .navbar {
-      grid-column: span 5; } }
 
 .logo {
   margin-right: auto; }
@@ -201,6 +182,7 @@ main {
   transition: all 0.3s ease; }
 
 .article {
+  grid-column: span 1;
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -224,55 +206,25 @@ main {
     grid-column: span 2; } }
 
 @media only screen and (min-width: 48.1em) {
-  .header-item1 {
-    grid-column: 1 / span 2; } }
+  .article--selected-fixed {
+    grid-column: span 2; } }
 
 @media only screen and (min-width: 69em) {
-  .header-item1 {
-    grid-column: 1 / span 3;
+  .article--selected-fixed {
+    grid-column: span 3;
     position: sticky;
     top: 0px; } }
 
-@media only screen and (min-width: 48.1em) {
-  .header-item2 {
-    grid-column: 1 / span 1; } }
+@media only screen and (min-width: 69em) {
+  .article-selected-right {
+    grid-column: col4 / span 2; } }
 
 @media only screen and (min-width: 69em) {
-  .header-item2 {
-    grid-column: 4 / span 1; } }
+  .article-right {
+    grid-column: col4; } }
 
-@media only screen and (min-width: 48.1em) {
-  .header-item3 {
-    grid-column: 2 / span 1; } }
-
-@media only screen and (min-width: 69em) {
-  .header-item3 {
-    grid-column: 5 / span 1; } }
-
-@media only screen and (min-width: 48.1em) {
-  .header-item4 {
-    grid-column: 1 / span 1; } }
-
-@media only screen and (min-width: 69em) {
-  .header-item4 {
-    grid-column: 4 / span 1; } }
-
-@media only screen and (min-width: 48.1em) {
-  .header-item5 {
-    grid-column: 2 / span 1; } }
-
-@media only screen and (min-width: 69em) {
-  .header-item5 {
-    grid-column: 5 / span 1; } }
-
-@media only screen and (min-width: 48.1em) {
-  .header-item6 {
-    grid-column: 1 / span 2; } }
-
-@media only screen and (min-width: 69em) {
-  .header-item6 {
-    grid-column: 4 / span 2;
-    margin-top: -3.5rem; } }
+.article-mt-fix {
+  margin-top: -3.5rem; }
 
 .tag-container {
   display: flex;
@@ -299,6 +251,24 @@ main {
   font-size: 1.2rem;
   padding-top: .8rem;
   max-height: 2.5rem; }
+
+.newsletter {
+  grid-column: span 1;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 5rem; }
+  @media only screen and (min-width: 48.1em) {
+    .newsletter {
+      padding-left: 4rem;
+      padding-right: 4rem; } }
+
+.newsletter-header {
+  margin-bottom: 2.5rem;
+  color: #2b2b2b; }
+
+.newsletter-content {
+  margin-bottom: 2.5rem; }
 
 .u-text-center {
   text-align: center; }

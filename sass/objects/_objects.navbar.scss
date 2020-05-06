@@ -3,6 +3,7 @@
 // }
 
 .navbar {
+  height: 9rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -11,8 +12,8 @@
   background-color: $color-white;
   z-index: 1000;
 
-  @include respond(tablet) { grid-column: span 2;}
-  @include respond(desktop) { grid-column: span 5;}
+  // @include respond(tablet) { grid-column: span 2;}
+  // @include respond(desktop) { grid-column: span 5;}
 }
 
 
