@@ -35,6 +35,10 @@
   }
 }
 
+.newsletter-form  {
+  font-family: "Roboto";
+  margin-bottom: 2rem;
+}
 
 .newsletter-form input {
   display: block;
@@ -48,15 +52,21 @@
   outline: none;
 }
 
+.newsletter-form input[type=placeholder] {
+  color: $color-grey-dark;
+}
+
 .newsletter-form input[type=text] {
   padding-left: 2rem;
   margin-bottom: 4rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: .5px;
   border-radius: .2rem;
-  color: $color-grey-dark;
+  color: $color-black;
 }
+
+
 
 
 .checkbox-container {
@@ -67,21 +77,60 @@
 .newsletter-form input[type="checkbox"] {
   -webkit-appearance: none;
   position: relative;
-  height: 15px;
-  width: 15px;
+  height: 1.5rem;
+  width: 1.5rem;
   padding: 1rem;
   margin-right: 1.5rem;
   background-color: $color-white;
   border: none;
   border-radius: .2rem;
+  cursor: pointer;
+}
+
+.newsletter-form input[type="checkbox"]:checked:after {
+  content: '\2714';
+  font-size: 1.4rem;
+  position: absolute;
+  top: .15rem;
+  left: .5rem;
+  color: $color-black;
 }
 
 .newsletter-form label {
-  font-size: 1.3rem;
-  // font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 400;
   letter-spacing: .5px;
   color: $color-black;
 }
+
+.newsletter-form button {
+  width: 25rem;
+  margin-top: 3.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  letter-spacing: .5px;
+  color: $color-black;
+  text-align: left;
+  background-color: $color-tertiary-2;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: .2rem;
+}
+
+.newsletter-form button:hover {
+  background-color: darken($color-tertiary-2, 15%);
+}
+
+.newsletter-form button:focus {
+  outline: none;
+}
+
+
+
 
 
 
