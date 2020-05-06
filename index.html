@@ -17,22 +17,21 @@
 
 </head>
 <body>
-  <div class="grid">
-    <nav>
-      <div class="navbar">
-        <h1 class="logo"><a href="#">It`s Nice That</a></h1>
-        <span class="material-icons search-icon">search</span>
-        <div class="burger-icon">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+  <nav class="grid">
+    <div class="navbar navbar-grid-item">
+      <h1 class="logo"><a href="#">It`s Nice That</a></h1>
+      <span class="material-icons search-icon">search</span>
+      <div class="burger-icon">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-    </nav>
-
-    <main class="main-header">
-
-      <!-- Article inside main 01-->
+    </div>
+  </nav>
+  <!-- HEADER  -->
+  <header class="grid">
+    <div class="article-grid-item">
+    <!-- Article inside main 01-->
       <article class="article article--selected-fixed header-item1">
         <a href="#">
           <img src="https://source.unsplash.com/vluAxrgzaz0/" alt="alt pic">
@@ -50,8 +49,8 @@
         </div>
       </article>
 
-      <!-- Article inside main 02-->
-      <article class="article header-item2">
+    <!-- Article inside main 02-->
+      <article class="article">
         <a href="#">
           <img src="https://source.unsplash.com/xb0wLfZH9Zo/900x900" alt="alt pic" SameSite="None">
           <h4 class="article-header">Speaking with Teresa Romez about everyday life objects inspiration in her practice</h4>
@@ -69,8 +68,8 @@
         </div>
       </article>
 
-      <!-- Article inside main 03-->
-      <article class="article header-item3">
+    <!-- Article inside main 03-->
+      <article class="article">
         <a href="#">
           <img src="https://source.unsplash.com/dUaf3cHs9Xk/" alt="alt pic">
           <h4 class="article-header">Who needs Google Earth when you can walk the streets of London with Leoni Fent</h4>
@@ -88,8 +87,8 @@
         </div>
       </article>
 
-      <!-- Article inside main 06-->
-      <article class="article article--selected header-item6">
+    <!-- Article inside main 04-->
+      <article class="article article--selected article-selected-right article-mt-fix">
         <a href="#">
           <img src="https://source.unsplash.com/Sy8dsVyiPgs/" alt="alt pic">
           <h3 class="article-header">Bizzarri-Rodriguez on its design for Jonas Mekas’ monumental last project before his death</h3>
@@ -109,8 +108,8 @@
         </div>
       </article>
 
-      <!-- Article inside main 04-->
-      <article class="article header-item4">
+    <!-- Article inside main 05-->
+      <article class="article article-right">
         <a href="#">
           <img src="https://source.unsplash.com/yu68fUQDvOI/" alt="alt pic">
           <h4 class="article-header">After 11 years of practice, Jan Moussein tells us why he is now more comfortable as a designer than ever before</h4>
@@ -127,8 +126,8 @@
         </div>
       </article>
 
-      <!-- Article inside main 05-->
-      <article class="article header-item5">
+    <!-- Article inside main 06-->
+      <article class="article">
         <a href="#">
           <img src="https://source.unsplash.com/HGRI7lusR2M/" alt="alt pic">
           <h4 class="article-header">Manuel Labi’s new film, Bio: Diaspora, explores the importance of contemporary black education</h4>
@@ -145,11 +144,12 @@
           </span>
         </div>
       </article>
+    </div>
+  </header >
 
-
-    </main>
-
-    <main>
+    <!-- MAIN STARTS-->
+    <main class="grid">
+      <div class="article-grid-item">
       <!-- Article inside main 07-->
       <article class="article">
         <a href="#">
@@ -186,21 +186,6 @@
           </span>
         </div>
       </article>
-      <!-- <article class="article">
-        <img src="https://source.unsplash.com/vfq0y6Zvex0/" alt="alt pic">
-        <h4 class="article-header">Forever the student, Natalia Oledzka’s practice is a masterclass in subtlety</h4>
-        <h6 class="article-subhead">2 days ago</h6>
-        <div class="tag-container">
-          <h6 class="tag">Work</h6>
-          <h6 class="tag">Editorial</h6>
-          <span class="material-icons tag tag-icon js-tag-btn">more_horiz
-            <h6 class="tag u-hidden">Magazine</h6>
-            <h6 class="tag u-hidden">Student</h6>
-            <h6 class="tag u-hidden">Practice</h6>
-            <h6 class="tag u-hidden">Typography</h6>
-          </span>
-        </div>
-      </article> -->
 
       <!-- Article inside main 09-->
       <article class="article article--selected">
@@ -237,13 +222,13 @@
           </span>
         </div>
       </article>
-    </main>
+    </div>
 
-    <div class="full-width">
+    <div class="full-width-container">
       <div class="newsletter">
-        <h4>Looking for a bit of creative inspiration?</h4>
-        <p>Sign up to our all-new Midweek Mentor newsletter for top-notch advice, from our favourite creatives, on how to keep inspired and stay motivated.</p>
-        <form action="" method="get">
+        <h3 class="newsletter-header">Looking for a bit of creative inspiration?</h3>
+        <p class="newsletter-content">Sign up to our all-new Midweek Mentor newsletter for top-notch advice, from our favourite creatives, on how to keep inspired and stay motivated.</p>
+        <form class="newsletter-form"action="" method="get">
           <input type="text" value="Your email address">
           <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
           <label for="vehicle1">Midweek Mentor</label><br>
@@ -251,6 +236,11 @@
         </form>
       </div>
     </div>
+
+  </main>
+
+
+
   </div>
 </body>
 </html>

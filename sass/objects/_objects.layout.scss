@@ -10,109 +10,81 @@ body {
 // General GRID / 1 col + 1.5rem margins
 // --------------------------------------------------
 .grid {
-  // position: relative;
-  // overflow: hidden;
   margin: 0px auto; //centered grid
+
   display: grid;
+
   grid-template-columns:
-  [full-start] 1.5rem [content-start] 1fr [content-end] 0rem [full-end];
-  grid-template-rows:[navbar] 9rem [header] min-content [gap] 0rem [content] min-content
-  [gap] 5rem [newsletter] 500px;
- }
+  [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end];
 
- @include respond(desktop) {
-  grid-template-rows:[navbar] 9rem [header] min-content [gap] 5rem [content] min-content
-  [gap] 5rem [newsletter] min-content;
- }
+  // grid-template-rows:[navbar] 9rem [header] min-content [content] min-content [full-width] min-content;
 
- // <nav> element / inside GRID
- // --------------------------------------------------
-nav {
-  grid-column: content-start / content-end;
-  grid-row: navbar / span 1;
-
-  display: grid;
-  grid-template-columns: 1fr;
-
-  // 2 col grid / Tablet
   @include respond(tablet) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+    [full-start] 1.5rem [content-start] 1fr [col2] 1fr [content-end] 1.5rem [full-end];
   }
-  // 5 col grid / Desktop
+
   @include respond(desktop) {
-    margin: 0 auto;
-    grid-template-columns: repeat(5, 21.5rem);
+    grid-template-columns:
+    [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end]
+    1fr [full-end];
+
   }
 }
 
-// Header Grid / inside GRID
-// --------------------------------------------------
-// .main-header {
-//   grid-column: content-start / content-end;
-//   grid-row: header / span 1;
-
-//   display: flex;
-// }
+  // grid-template-rows:[navbar] 9rem [header] min-content [content] min-content [full-width] min-content;
+  // grid-template-rows:[navbar] 9rem [header] min-content [gap] 0rem [content] min-content
+  // [gap] 5rem [newsletter] 100px;
 
 
-
-.main-header {
+.navbar-grid-item {
   grid-column: content-start / content-end;
-  grid-row: header / span 1;
+}
+
+.article-grid-item {
+  grid-column: content-start / content-end;
 
   display: grid;
-  grid-template-columns: 1fr;
 
-  // 2 col grid / Tablet
+  grid-template-columns:
+  [content-start] 1fr [content-end];
+
+  // grid-template-rows:[navbar] 9rem [header] min-content [content] min-content [full-width] min-content;
+
   @include respond(tablet) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+    [content-start] 1fr [col2] 1fr [content-end];
   }
-  // 5 col grid / Desktop
+
   @include respond(desktop) {
-    margin: 0 auto;
-    grid-template-columns: repeat(5, 21.5rem);
+    grid-template-columns:
+    [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end];
   }
 }
 
-
-// Content Grid / inside GRID
-// --------------------------------------------------
-main {
-  grid-column: content-start / content-end;
-  grid-row: content / span 1;
-
-  display: grid;
-  grid-template-columns: 1fr;
-
-  // 2 col grid / Tablet
-  @include respond(tablet) {
-    grid-template-columns: 1fr 1fr;
-  }
-  // 5 col grid / Desktop
-  @include respond(desktop) {
-    margin: 0 auto;
-    grid-template-columns: repeat(5, 21.5rem);
-  }
-}
-
-.full-width {
+.full-width-container {
   position: relative;
+  margin-top: 5rem;
+
   grid-column: content-start / content-end;
-  grid-row: newsletter / span 1;
 
   display: grid;
   grid-template-columns: 1fr;
 
   // 2 col grid / Tablet
   @include respond(tablet) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @include respond(desktop) {
     grid-template-columns: 1fr 1fr;
   }
 
-
-  background-color: $color-secondary;
+  background-color: $color-secondary-light;
 }
 
-.full-width:before{
+.full-width-container:before{
   content: "";
   z-index: -1;
   position: absolute;
@@ -121,7 +93,11 @@ main {
   left: -100vw;
   right: -100vw;
   background:inherit;
+
+  @include respond(tablet) { display: none;}
+
 }
+
 
 
 
