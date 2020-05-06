@@ -1,8 +1,30 @@
+function test() {
+  alert("Please, fill in this text");
+}
+
+function at() {
+   alert("please, include an @ in the email address");
+}
+
+function dot() {
+   alert("please, a dot is missing in the email address");
+}
+
+
+function invalid() {
+   alert("Please provide a valid email address");
+}
+
+function success() {
+  alert('Thank you for subscribing! you\'ll receive a confirmation email shortly');
+}
+
+
 function showFeedback(event) {
   // 1
-  event.preventDefault()
-  if (!event.target.matches('.js-submit-btn')) return;
 
+  if (!event.target.matches('.js-submit-btn')) return;
+  event.preventDefault()
   let submitBtn = event.target.closest('.js-submit-btn');
   // console.log(submitBtn);
 
@@ -28,20 +50,25 @@ function showFeedback(event) {
       //return false;
       let emptyValue = false;
       // return emptyValue;
-      console.log(emptyValue);
+      // console.log(emptyValue);
+      test();
       return
     } else if (!input.value.includes('@')) {
-        console.log('please, include an @ in the email adress');
+        at();
+        console.log('please, include an @ in the email address');
         return false;
     } else if (!input.value.includes('.')) {
-        console.log('please, include a dot is missing in the email adress');
+        dot();
+        console.log('please, a dot is missing in the email address');
         return false;
       }
 
       if (regex.test(input.value) == true) {
+      success();
       console.log('Thank you for subscribing! you\'ll receive a confirmation email shortly')
       return true;
     } else {
+      invalid();
       console.log('Please provide a valid email address.');
       return true;
     }
@@ -70,11 +97,11 @@ function showFeedback(event) {
 }
 
 
-let at = '@';
-let dot = '.';
+// let at = '@';
+// let dot = '.';
 
-let together = at.localeCompare(dot);
-console.log(together);
+// let together = at.localeCompare(dot);
+// console.log(together);
 
 
 let parentElement = document.querySelector('body');
