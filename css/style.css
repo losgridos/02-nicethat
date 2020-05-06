@@ -123,10 +123,10 @@ body {
   position: relative;
   margin-top: 5rem;
   margin-bottom: 10rem;
+  background-color: #fdf2da;
   grid-column: content-start / content-end;
   display: grid;
-  grid-template-columns: 1fr;
-  background-color: #fdf2da; }
+  grid-template-columns: 1fr; }
   @media only screen and (min-width: 48.1em) {
     .full-width-container {
       margin-left: 1.5rem;
@@ -257,8 +257,8 @@ body {
   grid-column: span 1;
   width: 100%;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
   padding-top: 5rem;
+  padding-right: 1.5rem;
   padding-bottom: 5rem; }
   @media only screen and (min-width: 48.1em) {
     .newsletter {
@@ -300,13 +300,13 @@ body {
   color: #676767; }
 
 .newsletter-form input[type=text] {
-  padding-left: 2rem;
   margin-bottom: 4rem;
+  padding-left: 2rem;
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: .5px;
-  border-radius: .2rem;
-  color: #2b2b2b; }
+  color: #2b2b2b;
+  border-radius: .2rem; }
 
 .checkbox-container {
   display: flex;
@@ -317,8 +317,8 @@ body {
   position: relative;
   height: 1.5rem;
   width: 1.5rem;
-  padding: 1rem;
   margin-right: 1.5rem;
+  padding: 1rem;
   background-color: #ffffff;
   border: none;
   border-radius: .2rem;
@@ -326,10 +326,10 @@ body {
 
 .newsletter-form input[type="checkbox"]:checked:after {
   content: '\2714';
-  font-size: 1.4rem;
   position: absolute;
   top: .15rem;
   left: .5rem;
+  font-size: 1.4rem;
   color: #2b2b2b; }
 
 .newsletter-form label {
@@ -342,18 +342,18 @@ body {
   width: 25rem;
   margin-top: 3.5rem;
   padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 2rem;
+  padding-right: 2rem;
   padding-bottom: 2rem;
   font-size: 1.4rem;
   letter-spacing: .5px;
-  color: #2b2b2b;
   text-align: left;
+  color: #2b2b2b;
   background-color: #46b8f8;
   border: 0 none;
-  cursor: pointer;
   -webkit-border-radius: 5px;
-  border-radius: .2rem; }
+  border-radius: .2rem;
+  cursor: pointer; }
 
 .newsletter-form button:hover {
   background-color: #0998e9; }

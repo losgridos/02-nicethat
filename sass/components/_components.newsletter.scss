@@ -1,11 +1,15 @@
+// --------------------------------------------------
+// #Newsletter Component
+// --------------------------------------------------
+
 .newsletter {
   grid-column: span 1;
 
   width: 100%;
 
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
   padding-top: 5rem;
+  padding-right: 1.5rem;
   padding-bottom: 5rem;
 
   @include respond(tablet) {
@@ -30,16 +34,18 @@
 
   width: 100%;
 
-  @include respond(desktop) {
-    display: block;
-  }
+  @include respond(desktop) { display: block }
 }
 
+
+// Newsletter Form
+// --------------------------------------------------
 .newsletter-form  {
   font-family: "Roboto";
   margin-bottom: 2rem;
 }
 
+// Input
 .newsletter-form input {
   display: block;
   height: 5rem;
@@ -47,28 +53,21 @@
   border: none;
 }
 
+.newsletter-form input:focus { outline: none; }
 
-.newsletter-form input:focus {
-  outline: none;
-}
-
-.newsletter-form input[type=placeholder] {
-  color: $color-grey-dark;
-}
+.newsletter-form input[type=placeholder] { color: $color-grey-dark; }
 
 .newsletter-form input[type=text] {
-  padding-left: 2rem;
   margin-bottom: 4rem;
+  padding-left: 2rem;
   font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: .5px;
-  border-radius: .2rem;
   color: $color-black;
+  border-radius: .2rem;
 }
 
-
-
-
+// Checkbox
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -79,23 +78,25 @@
   position: relative;
   height: 1.5rem;
   width: 1.5rem;
-  padding: 1rem;
   margin-right: 1.5rem;
+  padding: 1rem;
   background-color: $color-white;
   border: none;
   border-radius: .2rem;
   cursor: pointer;
 }
 
+// Checkbox Checkmark
 .newsletter-form input[type="checkbox"]:checked:after {
   content: '\2714';
-  font-size: 1.4rem;
   position: absolute;
   top: .15rem;
   left: .5rem;
+  font-size: 1.4rem;
   color: $color-black;
 }
 
+// Checkbox Label
 .newsletter-form label {
   font-size: 1.4rem;
   font-weight: 400;
@@ -103,34 +104,25 @@
   color: $color-black;
 }
 
+// Submit Button
 .newsletter-form button {
   width: 25rem;
   margin-top: 3.5rem;
   padding-left: 2rem;
-  padding-right: 2rem;
   padding-top: 2rem;
+  padding-right: 2rem;
   padding-bottom: 2rem;
   font-size: 1.4rem;
   letter-spacing: .5px;
-  color: $color-black;
   text-align: left;
+  color: $color-black;
   background-color: $color-tertiary-2;
   border:0 none;
-  cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: .2rem;
+  cursor:pointer;
 }
 
-.newsletter-form button:hover {
-  background-color: darken($color-tertiary-2, 15%);
-}
+.newsletter-form button:hover { background-color: darken($color-tertiary-2, 15%); }
 
-.newsletter-form button:focus {
-  outline: none;
-}
-
-
-
-
-
-
+.newsletter-form button:focus { outline: none; }
