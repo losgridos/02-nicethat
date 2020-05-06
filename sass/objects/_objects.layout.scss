@@ -66,6 +66,7 @@ body {
   position: relative;
   margin-top: 5rem;
   margin-bottom: 10rem;
+  background-color: $color-secondary-light;
 
   grid-column: content-start / content-end;
 
@@ -78,11 +79,7 @@ body {
     margin-right: 1.5rem;
   }
 
-  @include respond(desktop) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  background-color: $color-secondary-light;
+  @include respond(desktop) { grid-template-columns: 1fr 1fr; }
 }
 
 .full-width-container:before{
@@ -96,7 +93,6 @@ body {
   background:inherit;
 
   @include respond(tablet) { display: none;}
-
 }
 
 
@@ -105,6 +101,7 @@ body {
 
 
 // Full Grid Fix
+// --------------------------------------------------
 // .<element> muss be position: relative;
 // To get background-color in 100% width but <element> content in center layout
 //
