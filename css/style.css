@@ -282,7 +282,7 @@ body {
   display: none;
   grid-column: 2 / span 1;
   width: 100%;
-  transform: scale(1.1); }
+  transform: scale(1.35); }
   @media only screen and (min-width: 69em) {
     .newsletter-img {
       display: block; } }
@@ -368,6 +368,10 @@ body {
 
 .newsletter-form button:visited {
   background-color: #0998e9; }
+
+.success-feedback {
+  margin-top: 2rem;
+  color: #46b8f8; }
 
 .u-text-center {
   text-align: center; }

@@ -35,7 +35,7 @@
   grid-column: 2 / span 1;
 
   width: 100%;
-  transform: scale(1.1);
+  transform: scale(1.35);
 
   @include respond(desktop) { display: block }
 }
@@ -132,3 +132,12 @@
 .newsletter-form button:focus { outline: none; }
 
 .newsletter-form button:visited {background-color: darken($color-tertiary-2, 15%);}
+
+
+// JS Submit Feedback
+// --------------------------------------------------
+
+.success-feedback {
+  margin-top: 2rem;
+  color: $color-tertiary-2;
+}
