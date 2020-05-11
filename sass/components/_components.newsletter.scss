@@ -3,8 +3,10 @@
 // --------------------------------------------------
 
 .newsletter {
+  display: relative;
   grid-column: span 1;
   width: 100%;
+  // height: 56rem;
   padding-left: 1.5rem;
   padding-top: 5rem;
   padding-right: 1.5rem;
@@ -44,6 +46,8 @@
 // Newsletter Form
 // --------------------------------------------------
 .newsletter-form  {
+  position: relative;
+  height: 20rem;
   font-family: "Roboto";
   margin-bottom: 2rem;
 }
@@ -138,6 +142,72 @@
 // --------------------------------------------------
 
 .success-feedback {
-  margin-top: 2rem;
+  margin-top: 3rem;
   color: $color-tertiary-2;
 }
+
+.alert-feedback-container {
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  max-height: 5rem;
+  display: inline-flex;
+  align-items: flex-end;
+  z-index: 500;
+  animation: alertFeedback 3s ease;
+}
+
+
+.alert-feedback {
+  padding-left: 1rem;
+  padding-top: .5rem;
+  padding-right: 1.5rem;
+  padding-bottom: .5rem;
+  background: $color-white;
+  border: 1px solid $color-grey;
+  border-radius: .4em;
+  box-shadow: 5px 5px 5px 0px rgba($color-black,.2);
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      z-index: 0;
+      border-style: solid;
+      border-color: $color-grey transparent;
+      border-width: 0 11px 11px;
+      top: -11.5px;
+      left: 20%;
+      margin-left: -11px;
+      display: block;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      z-index: 1;
+      border-style: solid;
+      border-color: $color-white transparent;
+      border-width: 0 10px 10px;
+      top: -10px;
+      left: 20%;
+      margin-left: -10px;
+    }
+}
+
+.alert-feedback p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $color-black;
+}
+
+
+.alert-icon {
+  font-size: 2.8rem;
+  color: $color-alert;
+  margin-right: .8rem;
+}
+
