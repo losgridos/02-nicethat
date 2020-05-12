@@ -13,86 +13,77 @@ function showFeedback(event) {
   if (!event.target.matches('.js-submit-btn')) return;
   event.preventDefault()
 
-  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let submitBtn = event.target.closest('.js-submit-btn');
-  let inputs = document.querySelectorAll('.input-email');
-  let inputsArray = Array.from(inputs);
+  let myInput = submitBtn.parentElement.firstElementChild;
+  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  inputsArray.forEach(input => {
-    if (input.value == "") {
-      feedback.empty();
+  if (myInput.value == "") {
+    feedback.empty();
+    feedback.successRemove();
+    return
+  } else if (!myInput.value.includes('@')) {
+      feedback.noAt()
       feedback.successRemove();
-      return
-    } else if (!input.value.includes('@')) {
-        feedback.noAt()
-        feedback.successRemove();
-        return false;
-    } else if (!input.value.includes('.')) {
-        feedback.noDot();
-        feedback.successRemove();
-        return false;
-    } else if (regex.test(input.value) == true) {
-        feedback.success();
-        emailList.push(input.value);
-        emailList.push(midweek.checked);
-        console.log(emailList);
-        return true;
-    } else {
-        feedback.invalid();
-        feedback.successRemove();
-        return false;
-      }
-  });
+      return false;
+  } else if (!myInput.value.includes('.')) {
+      feedback.noDot();
+      feedback.successRemove();
+      return false;
+  } else if (regex.test(myInput.value) == true) {
+      feedback.success();
+      emailList.push(myInput.value);
+      emailList.push(midweek.checked);
+      console.log(emailList);
+      return true;
+  } else {
+      feedback.invalid();
+      feedback.successRemove();
+      return false;
+    }
 }
-
-
 
 let feedback = {
   alertFeedback: function(text) {
+    let submitBtn = event.target.closest('.js-submit-btn');
+    let form = submitBtn.parentElement;
     let successMessage = document.querySelector(".success-feedback");
     let alertMessage = document.querySelector(".alert-feedback");
-    let forms = document.querySelectorAll('.newsletter-form');
-    let formsArray = Array.from(forms);
-    let htmlText = `<div class=\"alert-feedback-container alert-feedback\"><span class=\"material-icons alert-icon\">warning</span><p>${text}<p></div>`;
+    let alertText = `<div class=\"alert-feedback-container alert-feedback\"><span class=\"material-icons alert-icon\">warning</span><p>${text}<p></div>`;
 
-    formsArray.forEach(form => {
-      if (document.body.contains(successMessage)) {
-        successMessage.remove();
-      }
-      if (document.body.contains(alertMessage)) {
-        alertMessage.remove();
-      }
+    if (form.contains(successMessage)) {
+      successMessage.remove();
+    }
+    if (form.contains(alertMessage)) {
+      alertMessage.remove();
+    }
 
-      feedback.insertHtml(form, "beforeend", htmlText);
-      feedback.alertSetTimeout()
-    });
+    this.insertHtml(form, "beforeend", alertText);
+    this.alertSetTimeout();
   },
   empty: function() {
-    feedback.alertFeedback("Please, fill in this text");
+    this.alertFeedback("Please, fill in this text");
   },
   noAt: function() {
-    feedback.alertFeedback("Please, include an @ in the email address");
+    this.alertFeedback("Please, include an @ in the email address");
   },
   noDot: function() {
-    feedback.alertFeedback("Please, a dot is missing in the email address");
+    this.alertFeedback("Please, a dot is missing in the email address");
   },
   invalid: function() {
-    feedback.alertFeedback("Please provide a valid email address");
+    this.alertFeedback("Please provide a valid email address");
   },
   success: function() {
+    let submitBtn = event.target.closest('.js-submit-btn');
+    let form = submitBtn.parentElement;
     let successMessage = document.querySelector(".success-feedback");
     let alertMessage = document.querySelector(".alert-feedback");
-    let forms = document.querySelectorAll('.newsletter-form');
-    let formsArray = Array.from(forms);
-    let htmlText = "<p class=\"success-feedback\">Thank you for subscribing! you\'ll receive a confirmation email shortly</p>";
+    let successText = "<p class=\"success-feedback\">Thank you for subscribing! you\'ll receive a confirmation email shortly</p>";
 
-    formsArray.forEach(form => {
-      if (document.body.contains(successMessage)) {
-        successMessage.remove();
-      }
+    if (document.body.contains(successMessage)) {
+      successMessage.remove();
+    }
 
-      feedback.insertHtml(form, "afterend", htmlText);
-    });
+    feedback.insertHtml(form, "afterend", successText);
   },
   successRemove: function() {
     let successMessage = document.querySelector(".success-feedback");
@@ -111,4 +102,3 @@ let feedback = {
     element.insertAdjacentHTML(position, html);
   },
 };
-
