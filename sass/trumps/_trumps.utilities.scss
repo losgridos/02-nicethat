@@ -14,3 +14,26 @@
   display: none;
 }
 
+
+// #Colors
+// --------------------------------------------------
+
+// BG Colors
+.u-bg-black {
+  background-color: $color-black;
+}
+
+.u-bg-t1 {
+  background-color: $color-tertiary-1 !important;;
+}
+
+// Text Colors
+.u-text-white {
+  color: $color-white !important;
+}
+
+// #images
+// --------------------------------------------------
+.u-img-grayfilter {
+  filter: grayscale(60%) brightness(95%);
+}
