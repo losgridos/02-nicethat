@@ -148,6 +148,30 @@ body {
     .full-width-container:before {
       display: none; } }
 
+.banner-full-width-container {
+  display: none;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  background-color: #fbfafa;
+  grid-column: full-start / full-end; }
+  @media only screen and (min-width: 48.1em) {
+    .banner-full-width-container {
+      display: grid;
+      grid-template-columns: [full-start] 2rem [content-start] 1fr [content-end] 2rem [full-end]; } }
+  @media only screen and (min-width: 69em) {
+    .banner-full-width-container {
+      grid-template-columns: [full-start] 1fr [content-start] 98rem [content-end] 1fr [full-end]; } }
+
+.banner-full-width-container:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100vw;
+  right: -100vw;
+  background: inherit; }
+
 .navbar {
   height: 9rem;
   width: 100%;
@@ -478,6 +502,91 @@ body {
 @media only screen and (min-width: 69em) {
   .toptags .tag-container {
     width: 60%; } }
+
+.banner {
+  display: none;
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-left: 4rem;
+  padding-top: 4.5rem;
+  padding-right: 4rem;
+  padding-bottom: 5rem;
+  background-color: #f2f2f2; }
+  @media only screen and (min-width: 48.1em) {
+    .banner {
+      grid-column: content-start / content-end;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  .banner:hover {
+    color: #2b2b2b; }
+
+.banner--new {
+  padding-left: 1rem;
+  padding-top: 3.5rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  background-color: #bec8f6; }
+
+.banner-title {
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  padding-right: 2.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  border: 2px solid #2b2b2b; }
+
+.banner-header {
+  margin-top: 2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center; }
+
+.banner-header--new {
+  margin-top: .5rem;
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 1.1;
+  letter-spacing: .2rem;
+  color: #1645f5; }
+
+.banner-content--new {
+  padding-top: 2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #1645f5; }
+
+.banner-address {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: .05rem; }
+
+.banner-icon-new {
+  position: absolute;
+  top: 1rem;
+  right: .8rem;
+  z-index: 1;
+  font-size: 10rem;
+  color: #1645f5;
+  transform: rotate(15deg); }
+  @media screen and (max-width: 925px) {
+    .banner-icon-new {
+      display: none; } }
+
+.arrow-icon-new {
+  font-size: 1.3rem; }
 
 .u-text-center {
   text-align: center; }

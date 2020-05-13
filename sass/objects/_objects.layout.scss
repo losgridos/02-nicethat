@@ -32,15 +32,15 @@ body {
   }
 }
 
-  // grid-template-rows:[navbar] 9rem [header] min-content [content] min-content [full-width] min-content;
-  // grid-template-rows:[navbar] 9rem [header] min-content [gap] 0rem [content] min-content
-  // [gap] 5rem [newsletter] 100px;
 
-
+// Navbar Grid
+// --------------------------------------------------
 .navbar-grid-item {
   grid-column: content-start / content-end;
 }
 
+// Article Grid
+// --------------------------------------------------
 .article-grid-item {
   grid-column: content-start / content-end;
 
@@ -62,6 +62,8 @@ body {
   }
 }
 
+// Full Width Container / Newsletter
+// --------------------------------------------------
 .full-width-container {
   position: relative;
   margin-top: 5rem;
@@ -95,6 +97,38 @@ body {
   @include respond(tablet) { display: none;}
 }
 
+// Fult Width Container / Banner
+// --------------------------------------------------
+.banner-full-width-container {
+  display: none;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
+  background-color: $color-grey-light-2;
+
+  grid-column: full-start / full-end;
+
+  @include respond(tablet) {
+    display: grid;
+    grid-template-columns:
+    [full-start] 2rem [content-start] 1fr [content-end] 2rem [full-end];
+  }
+
+  @include respond(desktop) {
+    grid-template-columns:
+    [full-start] 1fr [content-start] 98rem [content-end] 1fr [full-end];
+  }
+}
+
+.banner-full-width-container:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100vw;
+  right: -100vw;
+  background:inherit;
+}
 
 
 
