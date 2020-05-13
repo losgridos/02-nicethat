@@ -64,7 +64,7 @@ h5 {
 
 // Tags, subheads
 h6 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
@@ -75,5 +75,6 @@ p {
   @include respond(tablet) {
     font-size: 2rem; }
     line-height: 2.5rem;
+
   @include respond(desktop) { font-size: 1.9rem; }
 }
