@@ -1,0 +1,31 @@
+.toptags {
+  grid-column: content-start / content-end;
+
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-left: 3rem;
+  padding-top: 4rem;
+  padding-right: 3rem;
+  padding-bottom: 4rem;
+  color: $color-black;
+  background-color: $color-secondary;
+
+  @include respond(tablet) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.toptags-header {
+  margin-bottom: 2rem;
+}
+
+.toptags-content {
+  margin-bottom: 4rem;
+
+  @include respond(desktop) { width: 60%; }
+}
+
+.toptags .tag-container {
+  @include respond(desktop) { width: 60%; }
+}
