@@ -20,7 +20,7 @@ body {
 
   @include respond(tablet) {
     grid-template-columns:
-    [full-start] 1.5rem [content-start] 1fr [col2] 1fr [content-end] 1.5rem [full-end];
+    [full-start] 3rem [content-start] 1fr [col2] 1fr [content-end] 3rem [full-end];
   }
 
   @include respond(desktop) {
@@ -29,7 +29,7 @@ body {
     1fr [full-end];
   }
 
-  background-color: $color-white;
+  // background-color: $color-white;
 }
 
 
@@ -60,6 +60,8 @@ body {
     grid-template-columns:
     [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end];
   }
+
+
 }
 
 // Full Width Container / Newsletter
@@ -67,7 +69,7 @@ body {
 .full-width-container {
   position: relative;
   margin-top: 5rem;
-  margin-bottom: 10rem;
+  // margin-bottom: 10rem; !! IMPORTANT put 10 rems into other element!
   background-color: $color-secondary-light;
 
   grid-column: content-start / content-end;
@@ -101,8 +103,8 @@ body {
 // --------------------------------------------------
 .banner-full-width-container {
   display: none;
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
+  // margin-top: 5rem;
+  // margin-bottom: 2.5rem;
   background-color: $color-grey-light-2;
 
   grid-column: full-start / full-end;
@@ -119,7 +121,8 @@ body {
   }
 }
 
-.banner-full-width-container:before {
+.banner-full-width-container:before,
+.footer-grid:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -130,6 +133,37 @@ body {
   background:inherit;
 }
 
+// Footer / Fult Width
+// --------------------------------------------------
+.footer-grid {
+
+  position: relative;
+  // height: 500px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  border-top: 1px solid $color-grey;
+  background-color: $color-black;
+
+  grid-column: content-start / content-end;
+
+  display: grid;
+  grid-template-columns:
+  [full-start] 3rem [content-start] 1fr [content-end] 3rem [full-end];
+
+  @include respond(tablet) {
+    grid-template-columns:
+    [full-start] 5rem [content-start] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [content-end] 5rem [full-end];
+
+    margin-top: 6rem;
+    border-top: none;
+  }
+
+  @include respond(desktop) {
+    grid-template-columns:
+    [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end]
+    1fr[full-end];
+  }
+}
 
 
 
