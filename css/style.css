@@ -13,7 +13,7 @@ html {
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #2b2b2b; }
 
 h2,
@@ -173,10 +173,10 @@ body {
   background: inherit; }
 
 .navbar {
-  height: 9rem;
-  width: 100%;
   display: flex;
   align-items: center;
+  height: 9rem;
+  width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: #ffffff;
@@ -184,14 +184,96 @@ body {
 
 .logo {
   margin-right: auto; }
+  @media only screen and (min-width: 48.1em) {
+    .logo {
+      margin-right: 2rem; } }
 
 .logo a:hover {
   color: #2b2b2b; }
+
+.slogan {
+  display: none;
+  margin-top: .15rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: .1rem; }
+  .slogan:hover a {
+    color: #2b2b2b; }
+  @media only screen and (min-width: 48.1em) {
+    .slogan {
+      display: block;
+      margin-right: auto; } }
+  @media only screen and (min-width: 69em) {
+    .slogan {
+      margin-right: 5rem; } }
+
+.search-container {
+  display: none;
+  margin-right: auto;
+  border-bottom: 1px solid #d5d5d5; }
+  @media only screen and (min-width: 69em) {
+    .search-container {
+      display: flex;
+      align-items: center; } }
+
+.input-search {
+  width: 34rem;
+  margin-top: .8rem;
+  padding-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: .1rem;
+  outline: none;
+  border: none; }
+
+.input-search::placeholder {
+  color: #a6a6a6;
+  opacity: 1;
+  /* Firefox */ }
+
+.input-search[type=text] {
+  color: #2b2b2b; }
+
+.input-search:focus::placeholder {
+  color: transparent; }
 
 .search-icon {
   margin-right: 1.5rem;
   font-size: 2.8rem;
   cursor: pointer; }
+  @media only screen and (min-width: 69em) {
+    .search-icon {
+      display: none; } }
+
+.search-icon--input {
+  display: none;
+  margin-right: -.3rem;
+  transform-origin: center;
+  transition: all .3s ease-out; }
+  .search-icon--input:hover {
+    transform: rotate(8deg) translate(4px, -1px);
+    transform-origin: center;
+    transition: all .3s ease-out; }
+  @media only screen and (min-width: 69em) {
+    .search-icon--input {
+      display: block; } }
+
+.navbar-categories {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+  cursor: pointer; }
+  @media only screen and (min-width: 69em) {
+    .navbar-categories {
+      display: flex;
+      align-items: center;
+      margin-right: 4rem; } }
+
+.navbar-categories-icon {
+  font-size: 1.5rem;
+  margin-left: .8rem; }
 
 .burger-icon {
   z-index: 1030;
