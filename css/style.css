@@ -10,6 +10,9 @@ html {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box; }
 
+::selection {
+  background: #834bf6; }
+
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
   font-weight: 400;
@@ -474,7 +477,7 @@ body {
   letter-spacing: .5px;
   color: #2b2b2b; }
 
-.newsletter-form button {
+.submit-btn {
   width: 25rem;
   margin-top: 3.5rem;
   padding-left: 2rem;
@@ -491,14 +494,19 @@ body {
   border-radius: .2rem;
   cursor: pointer; }
 
-.newsletter-form button:hover {
+.submit-btn:hover {
   background-color: #0998e9; }
 
-.newsletter-form button:focus {
+.submit-btn:focus {
   outline: none; }
 
-.newsletter-form button:visited {
+.submit-btn:visited {
   background-color: #0998e9; }
+
+.submit-btn--02 {
+  background-color: #fbd64a; }
+  .submit-btn--02:hover {
+    background-color: #f3c105; }
 
 .success-feedback {
   margin-top: 3rem;
