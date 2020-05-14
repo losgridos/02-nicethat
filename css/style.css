@@ -97,7 +97,8 @@ body {
 .grid {
   margin: 0px auto;
   display: grid;
-  grid-template-columns: [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end]; }
+  grid-template-columns: [full-start] 1.5rem [content-start] 1fr [content-end] 1.5rem [full-end];
+  background-color: #ffffff; }
   @media only screen and (min-width: 48.1em) {
     .grid {
       grid-template-columns: [full-start] 1.5rem [content-start] 1fr [col2] 1fr [content-end] 1.5rem [full-end]; } }
@@ -193,7 +194,7 @@ body {
 
 .slogan {
   display: none;
-  margin-top: .15rem;
+  margin-top: .25rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
@@ -264,6 +265,7 @@ body {
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: .1rem;
+  color: #2b2b2b;
   cursor: pointer; }
   @media only screen and (min-width: 69em) {
     .navbar-categories {
@@ -278,8 +280,8 @@ body {
 .burger-icon {
   z-index: 1030;
   display: block;
-  cursor: pointer;
-  padding-bottom: 0.6rem; }
+  padding-bottom: 0.6rem;
+  cursor: pointer; }
 
 .burger-icon div {
   height: 0.2rem;

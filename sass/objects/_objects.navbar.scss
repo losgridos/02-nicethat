@@ -29,7 +29,7 @@
 
 .slogan {
   display: none;
-  margin-top: .15rem;
+  margin-top: .25rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
@@ -110,6 +110,7 @@
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: .1rem;
+  color: $color-black;
   cursor: pointer;
 
   @include respond(desktop) {
@@ -130,8 +131,8 @@
 .burger-icon {
   z-index: 1030;
   display: block;
-  cursor: pointer;
   padding-bottom: 0.6rem;
+  cursor: pointer;
 }
 
 .burger-icon div {
