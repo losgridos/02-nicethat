@@ -20,7 +20,7 @@ body {
 
   @include respond(tablet) {
     grid-template-columns:
-    [full-start] 1.5rem [content-start] 1fr [col2] 1fr [content-end] 1.5rem [full-end];
+    [full-start] 3rem [content-start] 1fr [col2] 1fr [content-end] 3rem [full-end];
   }
 
   @include respond(desktop) {
@@ -138,24 +138,31 @@ body {
 .footer-grid {
 
   position: relative;
-  height: 500px;
+  // height: 500px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   border-top: 1px solid $color-grey;
-  // margin-top: 5rem;
-  // margin-bottom: 10rem;
   background-color: $color-black;
 
   grid-column: content-start / content-end;
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns:
+  [full-start] 3rem [content-start] 1fr [content-end] 3rem [full-end];
 
-  // 2 col grid / Tablet
-  // @include respond(tablet) {
-  //   margin-left: 1.5rem;
-  //   margin-right: 1.5rem;
-  // }
+  @include respond(tablet) {
+    grid-template-columns:
+    [full-start] 5rem [content-start] 1fr [col2] 1fr [col3] 1fr [col4] 1fr [content-end] 5rem [full-end];
 
-  // @include respond(desktop) { grid-template-columns: 1fr 1fr; }
+    margin-top: 6rem;
+    border-top: none;
+  }
+
+  @include respond(desktop) {
+    grid-template-columns:
+    [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end]
+    1fr[full-end];
+  }
 }
 
 

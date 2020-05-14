@@ -1,0 +1,111 @@
+.footer-icon {
+  grid-column: content-start / content-end;
+  margin-left: -1.5rem;
+  margin-bottom: 7rem;
+  font-size: 12rem;
+  color: $color-grey-dark;
+
+  @include respond(tablet) {
+    grid-column: 5 / span 1 !important;
+    grid-row: 1 / span 1 !important;
+    text-align: right;
+    // margin-top: 20rem;
+    margin-right: -1.5rem;
+    margin-bottom: 0;
+    // z-index: 1;
+  }
+
+  @include respond(desktop) {
+    grid-column: content-start / span 1 !important;
+    text-align: left;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.footer-grid ul {
+  grid-column: content-start / content-end;
+  font-weight: 300;
+  letter-spacing: .1rem;
+  border-bottom: 1px solid $color-grey-dark;
+
+  @include respond(tablet) {
+    grid-column: content-start / span 1;
+    border-bottom: none;
+  }
+}
+
+.footer-grid ul:last-of-type {
+  border-bottom: none;
+  margin-bottom: 5rem;
+}
+
+.footer-grid li {
+  padding-top: .6rem;
+  color: $color-white;
+  font-size: 1.4rem;
+  line-height: 1.5;
+
+  @include respond(desktop) { font-size: 1.6rem; }
+
+}
+
+.footer-grid a {
+  color: $color-white;
+    &:hover a { color: $color-white;}
+}
+
+.footer-grid li:first-of-type {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: $color-grey-dark;
+}
+
+.footer-grid li:last-of-type { padding-bottom: 5rem; }
+
+// Position of <Uls>
+// --------------------------------------------------
+.footer-list-address {
+  @include respond(tablet) { grid-column: content-start / span 3 !important }
+  @include respond(desktop) {
+    grid-column: content-start / span 1 !important;
+    margin-left: 1.5rem;
+  }
+}
+.footer-list-content {
+  @include respond(tablet) { grid-column: content-start / span 1 !important }
+  @include respond(desktop) { grid-column: 3 / span 1 !important }
+}
+.footer-list-social {
+  @include respond(tablet) { grid-column: 3 / span 1 !important }
+  @include respond(desktop) { grid-column: 4 / span 1 !important }
+}
+.footer-list-links {
+  @include respond(tablet) {
+    grid-column: 4 / span 1 !important;
+    padding-right: 2.5rem;
+  }
+  @include respond(desktop) { grid-column: 5 / span 1 !important }
+}
+.footer-list-network {
+  @include respond(tablet) { grid-column: 5 / span 1 !important }
+  @include respond(desktop) { grid-column: 6 / span 1 !important }
+}
+
+
+.footer-copyright {
+  grid-column: content-start / content-end;
+  width: 400px;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: .1rem;
+  font-family: "Roboto", sans-serif;
+  color: $color-grey-dark;
+
+  @include respond(tablet) { grid-column: content-start / content-end}
+  @include respond(desktop) { margin-left: 1.5rem; }
+}
