@@ -29,7 +29,7 @@ body {
     1fr [full-end];
   }
 
-  background-color: $color-white;
+  // background-color: $color-white;
 }
 
 
@@ -60,6 +60,8 @@ body {
     grid-template-columns:
     [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end];
   }
+
+
 }
 
 // Full Width Container / Newsletter
@@ -67,7 +69,7 @@ body {
 .full-width-container {
   position: relative;
   margin-top: 5rem;
-  margin-bottom: 10rem;
+  // margin-bottom: 10rem; !! IMPORTANT put 10 rems into other element!
   background-color: $color-secondary-light;
 
   grid-column: content-start / content-end;
@@ -101,8 +103,8 @@ body {
 // --------------------------------------------------
 .banner-full-width-container {
   display: none;
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
+  // margin-top: 5rem;
+  // margin-bottom: 2.5rem;
   background-color: $color-grey-light-2;
 
   grid-column: full-start / full-end;
@@ -119,7 +121,8 @@ body {
   }
 }
 
-.banner-full-width-container:before {
+.banner-full-width-container:before,
+.footer-grid:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -130,6 +133,30 @@ body {
   background:inherit;
 }
 
+// Footer / Fult Width
+// --------------------------------------------------
+.footer-grid {
+
+  position: relative;
+  height: 500px;
+  border-top: 1px solid $color-grey;
+  // margin-top: 5rem;
+  // margin-bottom: 10rem;
+  background-color: $color-black;
+
+  grid-column: content-start / content-end;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  // 2 col grid / Tablet
+  // @include respond(tablet) {
+  //   margin-left: 1.5rem;
+  //   margin-right: 1.5rem;
+  // }
+
+  // @include respond(desktop) { grid-template-columns: 1fr 1fr; }
+}
 
 
 
