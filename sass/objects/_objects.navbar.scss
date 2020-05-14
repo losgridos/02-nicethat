@@ -1,45 +1,137 @@
-// nav {
-
-// }
+// --------------------------------------------------
+// #Navbar Component
+// --------------------------------------------------
 
 .navbar {
-  height: 9rem;
-  width: 100%;
   display: flex;
   align-items: center;
+  height: 9rem;
+  width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: $color-white;
   z-index: 1000;
-
-  // @include respond(tablet) { grid-column: span 2;}
-  // @include respond(desktop) { grid-column: span 5;}
 }
 
-
+// Logo + slogan
+// --------------------------------------------------
 .logo {
   margin-right: auto;
-  // background-color: green;
+
+  @include respond(tablet) {
+   margin-right: 2rem;
+  }
 }
 
 .logo a:hover{
   color: $color-black;
 }
 
+.slogan {
+  display: none;
+  margin-top: .15rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+
+  &:hover a { color: $color-black;}
+
+  @include respond(tablet) {
+    display: block;
+    margin-right: auto;
+  }
+   @include respond(desktop) {margin-right: 5rem;}
+}
+
+
+// Search
+// --------------------------------------------------
+.search-container {
+  display: none;
+  margin-right: auto;
+  border-bottom: 1px solid $color-grey-light;
+
+  @include respond(desktop) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.input-search {
+  width: 34rem;
+  margin-top: .8rem;
+  padding-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: .1rem;
+  outline: none;
+  border:none;
+}
+
+.input-search::placeholder {
+  color: $color-grey;
+  opacity: 1; /* Firefox */
+}
+
+.input-search[type=text] { color: $color-black; }
+
+.input-search:focus::placeholder { color: transparent; }
+
 .search-icon {
   margin-right: 1.5rem;
   font-size: 2.8rem;
   cursor: pointer;
-  // background-color: green;
 
+  @include respond(desktop) { display: none; }
 }
 
+.search-icon--input {
+  display: none;
+  margin-right: -.3rem;
+  transform-origin: center;
+  transition: all .3s ease-out;
+
+  &:hover {
+    transform: rotate(8deg) translate(4px, -1px);
+    transform-origin: center;
+    transition: all .3s ease-out;
+  }
+
+  @include respond(desktop) {
+    display: block;
+  }
+}
+
+// Categories Dropdown
+// --------------------------------------------------
+.navbar-categories {
+  display: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: .1rem;
+  cursor: pointer;
+
+  @include respond(desktop) {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+  }
+}
+
+.navbar-categories-icon {
+  font-size: 1.5rem;
+  margin-left: .8rem;
+}
+
+
+// Burger icon
+// --------------------------------------------------
 .burger-icon {
   z-index: 1030;
   display: block;
   cursor: pointer;
   padding-bottom: 0.6rem;
-  // background-color: red;
 }
 
 .burger-icon div {
@@ -49,4 +141,3 @@
   background-color: $color-black;
   transition: all 0.3s ease; // for later animation
 }
-
