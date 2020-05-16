@@ -1,66 +1,43 @@
 const nav = document.querySelector('nav');
 
-// let scrollPos = 0;
-
-// function checkPosition() {
-//   let windowY = window.scrollY;
-//   if (scrollPos > 90) {
-//     // Scrolling UP
-//     nav.classList.remove('is-visible');
-//     nav.classList.add('is-hidden');
-//   } else if (windowY < scrollPos) {
-//     // Scrolling DOWN
-//     nav.classList.remove('is-hidden');
-//     nav.classList.add('is-visible');
-//   }
-//   scrollPos = windowY;
-//   console.log(scrollPos);
-// }
-
-// window.addEventListener('scroll', checkPosition);
-
-//////////////
-
-
-
-
-
-
-
-
-// WORKING CODE
-
 let scrollPos = 0;
+
 
 function checkPosition() {
   let windowY = window.scrollY;
+
   if (windowY < scrollPos) {
+    console.log("1-UP-window", windowY);
+    console.log("2-UP-scrollPos", scrollPos);
+    console.log("body", document.body.offsetHeight)
     // Scrolling UP
-    console.log(scrollPos);
-    nav.classList.add('is-visible');
-    nav.classList.remove('is-hidden');
+    nav.classList.add('is-fixed');
+    document.body.style.paddingTop = nav.offsetHeight + 'px';
+
   } else {
     // Scrolling DOWN
-    nav.classList.add('is-hidden');
-    nav.classList.remove('is-visible');
+    nav.classList.remove('is-fixed');
+    document.body.style.paddingTop = "0px";
+    console.log("1-DOWN-window", windowY);
+    console.log("2-DOWN-scrollPos", scrollPos);
+    console.log("body-down", document.body.offsetHeight)
   }
-  //console.log(windowY);
   scrollPos = windowY;
-  //console.log(scrollPos);
-  //console.log(scrollPos + 20);
 
 }
 
 window.addEventListener('scroll', checkPosition);
 
 
-// ADD Border bottom but not from 0-50 scroll
-window.onscroll = function() {noBorder()};
 
-function noBorder() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    nav.classList.add('nav-border');
+function initOnTop() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    // do nothing
   } else {
-    nav.classList.remove('nav-border');
+    nav.classList.remove('is-fixed');
+    // nav.classList.remove('nav-border');
+    document.body.style.paddingTop = '0px';
   }
 }
+
+window.addEventListener('scroll', initOnTop);
