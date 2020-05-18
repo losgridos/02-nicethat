@@ -39,6 +39,11 @@ body {
   grid-column: content-start / content-end;
 }
 
+.categories-menu {
+  display: grid;
+  grid-template-columns: 1fr 104rem 1fr;
+}
+
 
 //Header
 //---------------------------------------------------

@@ -12,9 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">  <!-- Font icons / Material Design Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- JavaScript Scripts -->
+  <script defer src="js/nav-scroll.js"></script>
+  <script defer src="js/nav-menus.js"></script>
   <script defer src="js/tag-btn.js"></script>
   <script defer src="js/subscribe-btn.js"></script>
-  <script defer src="js/nav-scroll.js"></script>
   <script defer src="js/smooth-scroll.js"></script>
 
   <!-- Custom CSS -->
@@ -22,6 +23,7 @@
 
 </head>
 <body>
+  <div class="categories-bg-freeze u-hidden"></div>
   <nav class="grid u-bg-white">
     <div class="navbar navbar-grid-item">
       <h1 class="logo"><a href="#">It`s Nice That</a></h1>
@@ -30,7 +32,62 @@
         <input class="input-search" type="text" placeholder="Search for something">
         <span class="material-icons search-icon search-icon--input">search</span>
       </div>
+
       <span class="navbar-categories">Categories<span class="navbar-categories-icon material-icons">expand_more</span></span>
+      <div class="categories-menu u-hidden">
+        <div class="categories-container">
+          <div class="categories-row">
+            <div class="categories-col1-5">
+              <h6 class="categories-header">Disciplines</h6>
+              <h6 class="tag">Advertisement</h6>
+              <h6 class="tag">Animation</h6>
+              <h6 class="tag">Architecture</h6>
+              <h6 class="tag">Art</h6>
+              <h6 class="tag">Creative Industry</h6>
+              <h6 class="tag">Digital</h6>
+              <h6 class="tag">Event</h6>
+            </div>
+            <div class="categories-col1-5">
+              <h6 class="tag">Fashion</h6>
+              <h6 class="tag">Film</h6>
+              <h6 class="tag">Graphic Design</h6>
+              <h6 class="tag">Illustration</h6>
+              <h6 class="tag">Photography</h6>
+              <h6 class="tag">Product Design</h6>
+              <h6 class="tag">Publicacion</h6>
+            </div>
+            <div class="categories-col1-5">
+              <h6 class="categories-header">Popular Tags</h6>
+              <h6 class="tag">3D</h6>
+              <h6 class="tag">Books</h6>
+              <h6 class="tag">Branding</h6>
+              <h6 class="tag">Collage</h6>
+              <h6 class="tag">Comic</h6>
+              <h6 class="tag">Exhibition</h6>
+              <h6 class="tag">Font</h6>
+            </div>
+            <div class="categories-col1-5">
+              <h6 class="tag">Food&Drink</h6>
+              <h6 class="tag">Identity</h6>
+              <h6 class="tag">Logo</h6>
+              <h6 class="tag">Magazine</h6>
+              <h6 class="tag">Music</h6>
+              <h6 class="tag">Politics</h6>
+              <h6 class="tag">Portrait</h6>
+            </div>
+             <div class="categories-col1-5">
+              <h6 class="tag">Poster</h6>
+              <h6 class="tag">Sport</h6>
+              <h6 class="tag">Sustainability</h6>
+              <h6 class="tag">Technology</h6>
+              <h6 class="tag">Typography</h6>
+              <h6 class="tag">Web Design</h6>
+              <h6 class="tag">Zine</h6>
+            </div>
+          </div> <!-- end of cat.row -->
+        </div><!-- end of cat.container -->
+
+      </div>
       <span class="material-icons search-icon">search</span>
       <div class="burger-icon">
         <div class="line1"></div>
