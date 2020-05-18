@@ -4,6 +4,12 @@
   margin-bottom: 7rem;
   font-size: 12rem;
   color: $color-grey-dark;
+  cursor: pointer;
+  transition: color .5s ease;
+
+  &:hover {
+    color: $color-grey;
+  }
 
   @include respond(tablet) {
     grid-column: 5 / span 1 !important;

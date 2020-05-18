@@ -344,7 +344,11 @@ nav.is-fixed {
   margin-left: -1.5rem;
   margin-bottom: 7rem;
   font-size: 12rem;
-  color: #676767; }
+  color: #676767;
+  cursor: pointer;
+  transition: color .5s ease; }
+  .footer-icon:hover {
+    color: #a6a6a6; }
   @media only screen and (min-width: 48.1em) {
     .footer-icon {
       grid-column: 5 / span 1 !important;
