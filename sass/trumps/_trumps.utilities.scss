@@ -13,6 +13,10 @@
   display: none;
 }
 
+.u-is-visible {
+  display: block;
+}
+
 // #Margins
 // --------------------------------------------------
 .u-mt-0 { margin-top: 0; }
@@ -38,8 +42,12 @@
 .u-mb-4 { margin-bottom: 10rem; }
 
 
-// #Colors
+// #Text Colors
 // --------------------------------------------------
+
+.u-text-grey {
+  color: red !important;
+}
 
 // BG Colors
 .u-bg-black {

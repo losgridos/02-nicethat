@@ -2,39 +2,33 @@
 // #Navbar Component
 // --------------------------------------------------
 nav {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
+  position: relative;
   z-index: 1000;
   height: 9rem;
   grid-column: content-start / content-end;
   margin-bottom: 300px;
-  // transition: all .5s;
   background-color: $color-white;
 
 }
 
 .navbar {
-  // position: fixed;
-  // top: 0;
-  // z-index: 1000;
 
   width: 100%;
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  // transition: transform 3s;
 }
 
-nav.is-hidden {
-    transform: translateY(-100%);
-    // opacity: 0;
-}
-nav.is-visible {
-    transform: translateY(0);
-    //opacity: 1;
+// nav.is-hidden {
+//     transform: translateY(-100%);
+// }
+// nav.is-visible {
+//     transform: translateY(0);
+// }
+
+nav.nav-border {
+  border-bottom: 1px solid $color-grey-light;
 }
 
 nav.is-fixed {
@@ -42,13 +36,13 @@ nav.is-fixed {
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 1px solid $color-grey-light;
 }
 
 // Logo + slogan
 // --------------------------------------------------
 .logo {
   margin-right: auto;
+  user-select: none;
 
   @include respond(tablet) {
    margin-right: 2rem;
@@ -144,6 +138,7 @@ nav.is-fixed {
   letter-spacing: .1rem;
   color: $color-black;
   cursor: pointer;
+  user-select: none;
 
   @include respond(desktop) {
     display: flex;
@@ -155,8 +150,67 @@ nav.is-fixed {
 .navbar-categories-icon {
   font-size: 1.5rem;
   margin-left: .8rem;
+  // transform: rotate(180deg);
 }
 
+.is-rotated {
+  transform: rotate(180deg);
+}
+
+// Categories Menu
+// --------------------------------------------------
+.categories-menu {
+  z-index: 500;
+  // display: none;
+  position: absolute;
+  top: 9rem; // navbar height
+  left: 0;
+  right: 0;
+  padding-top: 6rem;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-grey-light-1;
+}
+
+.categories-header {
+  color: $color-grey-dark;
+  padding-bottom: 1.5rem;
+}
+
+.categories-container {
+  grid-column: 2 / span 1;
+}
+
+.categories-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6rem;
+}
+
+.categories-col1-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.categories-col1-5 h6 {
+  margin-top: .5rem;
+}
+
+.categories-bg-freeze {
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $color-black;
+  opacity: .15;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
 
 // Burger icon
 // --------------------------------------------------
