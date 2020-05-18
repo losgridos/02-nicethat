@@ -7,9 +7,9 @@ function checkPosition() {
   let windowY = window.scrollY;
 
   if (windowY < scrollPos) {
-    console.log("1-UP-window", windowY);
-    console.log("2-UP-scrollPos", scrollPos);
-    console.log("body", document.body.offsetHeight)
+    // console.log("1-UP-window", windowY);
+    // console.log("2-UP-scrollPos", scrollPos);
+    // console.log("body", document.body.offsetHeight)
     // Scrolling UP
     nav.classList.add('is-fixed');
     document.body.style.paddingTop = nav.offsetHeight + 'px';
@@ -18,9 +18,9 @@ function checkPosition() {
     // Scrolling DOWN
     nav.classList.remove('is-fixed');
     document.body.style.paddingTop = "0px";
-    console.log("1-DOWN-window", windowY);
-    console.log("2-DOWN-scrollPos", scrollPos);
-    console.log("body-down", document.body.offsetHeight)
+    // console.log("1-DOWN-window", windowY);
+    // console.log("2-DOWN-scrollPos", scrollPos);
+    // console.log("body-down", document.body.offsetHeight)
   }
   scrollPos = windowY;
 
