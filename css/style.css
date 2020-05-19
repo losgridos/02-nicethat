@@ -12,7 +12,8 @@ html {
   box-sizing: border-box; }
 
 ::selection {
-  background: #834bf6; }
+  background: #834bf6;
+  color: #ffffff; }
 
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
