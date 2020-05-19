@@ -8,11 +8,10 @@ nav {
   grid-column: content-start / content-end;
   margin-bottom: 300px;
   background-color: $color-white;
-
+  border-bottom: 1px solid $color-white;
 }
 
 .navbar {
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -20,16 +19,7 @@ nav {
   padding-right: 1.5rem;
 }
 
-// nav.is-hidden {
-//     transform: translateY(-100%);
-// }
-// nav.is-visible {
-//     transform: translateY(0);
-// }
-
-nav.nav-border {
-  border-bottom: 1px solid $color-grey-light;
-}
+nav.nav-border { border-bottom: 1px solid $color-grey-light; }
 
 nav.is-fixed {
   position: fixed;
@@ -44,14 +34,10 @@ nav.is-fixed {
   margin-right: auto;
   user-select: none;
 
-  @include respond(tablet) {
-   margin-right: 2rem;
-  }
+  @include respond(tablet) { margin-right: 2rem; }
 }
 
-.logo a:hover{
-  color: $color-black;
-}
+.logo a:hover { color: $color-black; }
 
 .slogan {
   display: none;
@@ -123,9 +109,7 @@ nav.is-fixed {
     transition: all .3s ease-out;
   }
 
-  @include respond(desktop) {
-    display: block;
-  }
+  @include respond(desktop) { display: block; }
 }
 
 // Categories Dropdown
@@ -150,23 +134,18 @@ nav.is-fixed {
 .navbar-categories-icon {
   font-size: 1.5rem;
   margin-left: .8rem;
-  // transform: rotate(180deg);
 }
 
-.is-rotated {
-  transform: rotate(180deg);
-}
+.is-rotated { transform: rotate(180deg); }
 
 // Categories Menu
 // --------------------------------------------------
 .categories-menu {
   z-index: 500;
-  // display: none;
   position: absolute;
   top: 9rem; // navbar height
   left: 0;
   right: 0;
-  padding-top: 6rem;
   background-color: $color-white;
   border-bottom: 1px solid $color-grey-light-1;
 }
@@ -177,6 +156,7 @@ nav.is-fixed {
 }
 
 .categories-container {
+  padding-top: 6rem;
   grid-column: 2 / span 1;
 }
 
@@ -193,24 +173,18 @@ nav.is-fixed {
   justify-content: flex-end;
 }
 
-.categories-col1-5 h6 {
-  margin-top: .5rem;
-}
+.categories-col1-5 h6 { margin-top: .5rem; }
 
 .categories-bg-freeze {
   z-index: 500;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   height: 100%;
   width: 100%;
   background-color: $color-black;
   opacity: .15;
 }
 
-.no-scroll {
-  overflow: hidden;
-}
+.no-scroll { overflow: hidden; }
 
 // Burger icon
 // --------------------------------------------------
