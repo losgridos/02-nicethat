@@ -35,19 +35,13 @@ body {
 
 // Navbar Grid
 // --------------------------------------------------
-.navbar-grid-item {
-  grid-column: content-start / content-end;
-}
+.navbar-grid-item { grid-column: content-start / content-end; }
 
 .categories-menu {
   display: grid;
   grid-template-columns: 1fr 104rem 1fr;
 }
 
-
-//Header
-//---------------------------------------------------
-// header { padding-top: 9rem;}
 
 // Article Grid
 // --------------------------------------------------
@@ -79,7 +73,6 @@ body {
 .full-width-container {
   position: relative;
   margin-top: 5rem;
-  // margin-bottom: 10rem; !! IMPORTANT put 10 rems into other element!
   background-color: $color-secondary-light;
 
   grid-column: content-start / content-end;
@@ -87,7 +80,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
 
-  // 2 col grid / Tablet
   @include respond(tablet) {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -113,8 +105,6 @@ body {
 // --------------------------------------------------
 .banner-full-width-container {
   display: none;
-  // margin-top: 5rem;
-  // margin-bottom: 2.5rem;
   background-color: $color-grey-light-2;
 
   grid-column: full-start / full-end;
@@ -148,7 +138,6 @@ body {
 .footer-grid {
 
   position: relative;
-  // height: 500px;
   padding-top: 8rem;
   padding-bottom: 8rem;
   border-top: 1px solid $color-grey;
