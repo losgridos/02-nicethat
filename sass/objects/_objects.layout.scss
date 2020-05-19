@@ -42,6 +42,20 @@ body {
   grid-template-columns: 1fr 104rem 1fr;
 }
 
+.burger-menu-grid {
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  // display: none;
+
+  z-index: 40;
+  position: absolute;
+  top: 9rem; // navbar height
+  left: 0;
+  right: 0;
+  background-color: $color-primary;
+
+}
+
 
 // Article Grid
 // --------------------------------------------------
