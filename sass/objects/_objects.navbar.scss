@@ -13,11 +13,13 @@ nav {
 }
 
 .navbar {
+  z-index: 1030;
   width: 100%;
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  // background-color: $color-primary;
 }
 
 nav.nav-border { border-bottom: 1px solid $color-grey-light; }
@@ -28,6 +30,7 @@ nav.is-fixed {
   left: 0;
   right: 0;
 }
+
 
 // --------------------------------------------------
 // Logo + slogan
@@ -231,6 +234,7 @@ nav.is-fixed {
   padding-bottom: 3rem;
 }
 
+
 .burger-menu a {
   color: $color-white;
     &:hover a { color: $color-white;}
@@ -251,13 +255,22 @@ nav.is-fixed {
   }
 }
 
+.burger-menu-item:nth-of-type(5n) {
+   @include respond(desktop) {
+    grid-column: col5 / span 1;
+    grid-row: 1 / span 1;
+  }
+}
+
 // last <ul>
 .burger-menu-item:last-of-type {
   border-bottom:none;
 
+
   @include respond(desktop) {
     grid-column: col5 / span 1;
-    margin-top: -230px;
+    grid-row: 1 / span 1;
+    margin-top: 200px;
   }
 }
 
@@ -300,6 +313,7 @@ nav.is-fixed {
   display: flex;
   align-items: center;
   padding-top: 1.5rem;
+  @include respond(desktop) { padding-top: .8rem; }
 }
 
 .burger-menu-social-icon {
