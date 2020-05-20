@@ -43,9 +43,18 @@ body {
 }
 
 .burger-menu-grid {
+  // display: none; // on-off
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
-  // display: none;
+
+  @include respond(tablet) {
+    grid-template-columns:
+    [full-start] 3rem [content-start] 1fr [col2] 1fr [content-end] 3rem [full-end];
+  }
+  @include respond(desktop) {
+    grid-template-columns:
+    [full-start] 1fr [content-start] 107.5rem [content-end] 1fr [full-end];
+  }
 
   z-index: 40;
   position: absolute;
@@ -53,7 +62,6 @@ body {
   left: 0;
   right: 0;
   background-color: $color-primary;
-
 }
 
 
