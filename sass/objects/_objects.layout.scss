@@ -43,7 +43,7 @@ body {
 }
 
 .burger-menu-grid {
-  // display: none; // on-off
+
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
 
@@ -56,12 +56,22 @@ body {
     [full-start] 1fr [content-start] 107.5rem [content-end] 1fr [full-end];
   }
 
-  z-index: 40;
-  position: absolute;
-  top: 9rem; // navbar height
+  // Absolute Positioning all page
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0rem;
   left: 0;
-  right: 0;
+  overflow-x: hidden;
+  padding-top: 9rem;
+  transition: 0.5s;
+  // Works!
+
   background-color: $color-primary;
+
+  // on-off
+  display: none;
 }
 
 
