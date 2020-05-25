@@ -129,8 +129,7 @@ body {
   overflow-x: hidden;
   padding-top: 9rem;
   transition: 0.5s;
-  background-color: #834bf6;
-  display: none; }
+  background-color: #834bf6; }
   @media only screen and (min-width: 48.1em) {
     .burger-menu-grid {
       grid-template-columns: [full-start] 3rem [content-start] 1fr [col2] 1fr [content-end] 3rem [full-end]; } }
