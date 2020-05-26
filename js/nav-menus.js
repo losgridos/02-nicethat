@@ -21,22 +21,17 @@ function catMenuToggle() {
   // Nav bottom border
   if (!categoriesMenu.classList.contains("u-hidden")) {
     nav.classList.remove('nav-border');
-  }
+  };
+  noNavBorder();
 
-  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+  // When burgerMenu is visible, click in Cat-Menu and burgerMenu will hide
+  if (!document.querySelector('.burger-menu-grid').classList.contains("u-hidden")) {
     // do nothing
-  } else {
-    nav.classList.remove('nav-border');
-  }
-
-  // When burgerMenu is visible, click in Cat-Menu and burgerMenu is hidden
-  if (document.querySelector('.burger-menu-grid').classList.contains("u-hidden")) {
-    // do nothing
-  } else {
     document.querySelector('.burger-menu-grid').classList.toggle("u-hidden");
     document.body.classList.add("no-scroll");
     burgerIconAnimation();
-  }
+    navColorToggle()
+  };
 }
 
 
@@ -56,6 +51,11 @@ function catMenuOutsideClose(event) {
       document.querySelector('.categories-bg-freeze').classList.add("u-hidden");
       document.querySelector('.categories-bg-freeze').classList.remove("is-visible");
       document.body.classList.remove("no-scroll");
+      // if nav do not have a border when BGFreeze is hidden, add a border.
+      if (!nav.classList.contains("nav-border")) {
+        nav.classList.add('nav-border');
+      }
+      noNavBorder();
     }
   }
 }
@@ -66,25 +66,46 @@ const burgerIcon = document.querySelector('.burger-icon');
 burgerIcon.addEventListener('click', burgerMenuToggle);
 
 function burgerMenuToggle() {
-
   const burgerMenu = document.querySelector('.burger-menu-grid');
   burgerMenu.classList.toggle("u-hidden");
   document.body.classList.toggle("no-scroll");
   // burger icon animation
   burgerIconAnimation();
-
-  if (document.querySelector('.categories-menu').classList.contains("u-hidden")) {
-    // do nothing
-  } else {
-    console.log("catMenu is visible");
+  // navbar colors toggle
+  navColorToggle();
+  // close the catMenu if already open
+  if (!document.querySelector('.categories-menu').classList.contains("u-hidden")) {
     document.querySelector('.categories-menu').classList.toggle("u-hidden");
     document.querySelector('.navbar-categories-icon').classList.toggle("is-rotated");
     document.querySelector('.categories-bg-freeze').classList.toggle("u-hidden");
     document.querySelector('.categories-bg-freeze').classList.remove("is-visible");
     document.body.classList.add("no-scroll");
+  };
+}
+
+function noNavBorder() {
+  // if the scrollTop of the body is in the start position, remove the navBorder
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    // do nothing
+  } else {
+    nav.classList.remove('nav-border');
   }
-};
+}
 
 function burgerIconAnimation() {
   burgerIcon.classList.toggle('burger-animate')
+}
+
+function navColorToggle() {
+  nav.classList.toggle("nav-color-toggle");
+  // if catMenu is-visible, remove navBorder
+  if (!document.querySelector('.categories-menu').classList.contains("u-hidden")) {
+    nav.classList.remove('nav-border');
+  } else {
+    // if nav do not have a border when catMenu is hidden, add a border.
+    if (!nav.classList.contains("nav-border")) {
+      nav.classList.add('nav-border');
+    }
+    noNavBorder();
+  }
 }

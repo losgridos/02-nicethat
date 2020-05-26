@@ -60,11 +60,11 @@ body {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 1000;
+  z-index: 900;
   top: 0rem;
   left: 0;
   overflow-x: hidden;
-  padding-top: 9rem;
+  padding-top: 11rem; // acthung here! burger icon toggle, sonnst 9rem;
   transition: 0.5s;
   // Works!
 
