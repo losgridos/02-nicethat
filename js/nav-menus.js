@@ -3,10 +3,7 @@
 
 // click in categories >
 let categoriesBtn = document.querySelector('.navbar-categories');
-
 categoriesBtn.addEventListener('click', catMenuToggle);
-
-
 
 
 function catMenuToggle() {
@@ -17,8 +14,9 @@ function catMenuToggle() {
   categoriesMenu.classList.toggle("u-hidden");
   categoriesIcon.classList.toggle("is-rotated");
   categoriesBgFreeze.classList.toggle("u-hidden");
-  document.body.classList.toggle("no-scroll");
+  categoriesBgFreeze.classList.toggle("is-visible");
   nav.classList.add('nav-border');
+  document.body.classList.toggle("no-scroll");
 
   // Nav bottom border
   if (!categoriesMenu.classList.contains("u-hidden")) {
@@ -40,28 +38,26 @@ function catMenuToggle() {
   }
 }
 
- // MUSS FIX!
 
-// click outside categories-menu
-// document.body.addEventListener('click', catMenuOutsideClose);
+// click outside categories-menu Event
+document.body.addEventListener('click', catMenuOutsideClose);
 
 // When clicking outside of the event target (catMenu), CLOSE
-// function catMenuOutsideClose(event) {
-//   if (event.target.matches('.categories-menu') || event.target.matches('.categories-row')
-//     || event.target.matches('.navbar-categories') || event.target.matches('.navbar-categories-icon')
-//     || event.target.matches('.burger-icon')) {
-//     console.log("catMenuClose function here RETURN, doing nothing");
-//     return; // Works!
-//   } else {
-//     document.querySelector('.categories-menu').classList.add("u-hidden");
-//     document.querySelector('.navbar-categories-icon').classList.remove("is-rotated");
-//     document.querySelector('.categories-bg-freeze').classList.add("u-hidden");
-//     document.body.classList.remove("no-scroll");
-//     console.log("removing no-scroll"); // Problem here, not allowing burgerMenuToggle adding a no-scroll class
-//     // MUSS FIX!
-//   }
-// }
-
+function catMenuOutsideClose(event) {
+  if (document.querySelector('.categories-bg-freeze').classList.contains("is-visible")) {
+    if (event.target.matches('.categories-menu') || event.target.matches('.categories-row')
+      || event.target.matches('.navbar-categories') || event.target.matches('.navbar-categories-icon')
+      || event.target.matches('.burger-icon')) {
+      return;
+    } else {
+      document.querySelector('.categories-menu').classList.add("u-hidden");
+      document.querySelector('.navbar-categories-icon').classList.remove("is-rotated");
+      document.querySelector('.categories-bg-freeze').classList.add("u-hidden");
+      document.querySelector('.categories-bg-freeze').classList.remove("is-visible");
+      document.body.classList.remove("no-scroll");
+    }
+  }
+}
 
 // Burger MENU
 /////////////////////
@@ -72,9 +68,7 @@ function burgerMenuToggle() {
 
   const burgerMenu = document.querySelector('.burger-menu-grid');
   burgerMenu.classList.toggle("u-hidden");
-
-  document.body.classList.toggle("no-scroll"); // MUSS FIX!
-  console.log("adding no-scroll");
+  document.body.classList.toggle("no-scroll");
 
   if (document.querySelector('.categories-menu').classList.contains("u-hidden")) {
     // do nothing
@@ -83,18 +77,7 @@ function burgerMenuToggle() {
     document.querySelector('.categories-menu').classList.toggle("u-hidden");
     document.querySelector('.navbar-categories-icon').classList.toggle("is-rotated");
     document.querySelector('.categories-bg-freeze').classList.toggle("u-hidden");
+    document.querySelector('.categories-bg-freeze').classList.remove("is-visible");
     document.body.classList.add("no-scroll");
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
