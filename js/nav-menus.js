@@ -35,6 +35,7 @@ function catMenuToggle() {
   } else {
     document.querySelector('.burger-menu-grid').classList.toggle("u-hidden");
     document.body.classList.add("no-scroll");
+    burgerIconAnimation();
   }
 }
 
@@ -69,6 +70,8 @@ function burgerMenuToggle() {
   const burgerMenu = document.querySelector('.burger-menu-grid');
   burgerMenu.classList.toggle("u-hidden");
   document.body.classList.toggle("no-scroll");
+  // burger icon animation
+  burgerIconAnimation();
 
   if (document.querySelector('.categories-menu').classList.contains("u-hidden")) {
     // do nothing
@@ -81,3 +84,7 @@ function burgerMenuToggle() {
     document.body.classList.add("no-scroll");
   }
 };
+
+function burgerIconAnimation() {
+  burgerIcon.classList.toggle('burger-animate')
+}
