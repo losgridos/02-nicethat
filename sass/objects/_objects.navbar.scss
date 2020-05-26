@@ -31,6 +31,31 @@ nav.is-fixed {
   right: 0;
 }
 
+// Toggle class / change colors of nav when burger icon is clicked
+// --------------------------------------------------
+.nav-color-toggle .navbar {
+  background-color: $color-primary;
+  padding-bottom: 60px;
+  padding-top: 15px;
+}
+
+.nav-color-toggle .logo a,
+.nav-color-toggle .search-icon,
+.nav-color-toggle .slogan a,
+.nav-color-toggle .navbar-categories,
+.nav-color-toggle .input-search[type=text] {
+  color: $color-white;
+}
+
+.nav-color-toggle .input-search::placeholder {
+  color: $color-grey-light;
+}
+
+.nav-color-toggle .search-container {
+   border-bottom: 1px solid $color-grey-dark;
+}
+
+
 
 // --------------------------------------------------
 // Logo + slogan
@@ -83,6 +108,7 @@ nav.is-fixed {
   letter-spacing: .1rem;
   outline: none;
   border:none;
+  background-color: transparent;
 }
 
 .input-search::placeholder {
@@ -106,12 +132,12 @@ nav.is-fixed {
   display: none;
   margin-right: -.3rem;
   transform-origin: center;
-  transition: all .3s ease-out;
+  transition: transform .3s ease-out;
 
   &:hover {
     transform: rotate(8deg) translate(4px, -1px);
     transform-origin: center;
-    transition: all .3s ease-out;
+    transition: transform .3s ease-out;
   }
 
   @include respond(desktop) { display: block; }
