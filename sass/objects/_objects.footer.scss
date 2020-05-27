@@ -1,24 +1,14 @@
-.footer-icon {
+.footer-icon-container {
   grid-column: content-start / content-end;
   margin-left: -1.5rem;
   margin-bottom: 7rem;
-  font-size: 12rem;
-  color: $color-grey-dark;
-  cursor: pointer;
-  transition: color .5s ease;
-
-  &:hover {
-    color: $color-grey;
-  }
 
   @include respond(tablet) {
     grid-column: 5 / span 1 !important;
     grid-row: 1 / span 1 !important;
     text-align: right;
-    // margin-top: 20rem;
     margin-right: -1.5rem;
     margin-bottom: 0;
-    // z-index: 1;
   }
 
   @include respond(desktop) {
@@ -30,6 +20,17 @@
   }
 }
 
+.footer-icon {
+  color: $color-grey-dark;
+  font-size: 12rem;
+  cursor: pointer;
+  user-select: none;
+  transition: color .5s ease;
+
+  &:hover {
+    color: $color-grey;
+  }
+}
 
 .footer-grid ul {
   grid-column: content-start / content-end;
@@ -53,9 +54,7 @@
   color: $color-white;
   font-size: 1.4rem;
   line-height: 1.5;
-
   @include respond(desktop) { font-size: 1.6rem; }
-
 }
 
 .footer-grid a {
