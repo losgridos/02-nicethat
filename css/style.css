@@ -222,8 +222,8 @@ nav {
   height: 9rem;
   grid-column: content-start / content-end;
   margin-bottom: 300px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ffffff; }
+  border-bottom: 1px solid #ffffff;
+  transition: background-color .3s ease; }
 
 .navbar {
   z-index: 1030;
@@ -240,7 +240,8 @@ nav.is-fixed {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  background-color: #ffffff; }
 
 .nav-color-toggle .navbar {
   background-color: #834bf6;

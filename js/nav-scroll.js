@@ -8,6 +8,7 @@ function checkPosition() {
 
   if (windowY < scrollPos) {
     // Scrolling UP
+    nav.classList.remove('u-bg-white');
     nav.classList.add('is-fixed');
     nav.classList.add('nav-border');
     document.body.style.paddingTop = nav.offsetHeight + 'px';
