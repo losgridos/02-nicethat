@@ -73,7 +73,7 @@ nav.is-fixed {
 .slogan {
   display: none;
   margin-top: .25rem;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-title;
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: .1rem;
@@ -152,7 +152,7 @@ nav.is-fixed {
 // --------------------------------------------------
 .navbar-categories {
   display: none;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-title;
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: .1rem;

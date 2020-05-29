@@ -25,12 +25,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   letter-spacing: .5px; }
 
 p {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   color: #2b2b2b; }
 
@@ -980,7 +980,7 @@ nav.is-fixed {
   padding-right: 2.5rem;
   padding-bottom: 1rem;
   font-size: 1.1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: .15rem;
   text-transform: uppercase;
@@ -988,7 +988,7 @@ nav.is-fixed {
 
 .banner-header {
   margin-top: 2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.2;
@@ -1004,7 +1004,7 @@ nav.is-fixed {
 
 .banner-content--new {
   padding-top: 2rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 300;
   font-size: 1.8rem;
   color: #1645f5; }
@@ -1012,7 +1012,7 @@ nav.is-fixed {
 .banner-address {
   margin-top: 2rem;
   font-size: 1.1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   letter-spacing: .05rem; }
 

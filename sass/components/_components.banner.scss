@@ -37,7 +37,7 @@
   padding-right: 2.5rem;
   padding-bottom: 1rem;
   font-size: 1.1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-title;
   font-weight: 700;
   letter-spacing: .15rem;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
 
 .banner-header {
   margin-top: 2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-title;
   font-weight: 500;
   font-size: 3rem;
   line-height: 1.2;
@@ -64,7 +64,7 @@
 
 .banner-content--new {
   padding-top: 2rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: $font-mono;
   font-weight: 300;
   font-size: 1.8rem;
   color: $color-tertiary-3;
@@ -73,7 +73,7 @@
 .banner-address {
   margin-top: 2rem;
   font-size: 1.1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-title;
   font-weight: 700;
   letter-spacing: .05rem;
 }
