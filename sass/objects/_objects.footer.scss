@@ -108,7 +108,7 @@
   font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: .1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-title;
   color: $color-grey-dark;
 
   @include respond(tablet) { grid-column: content-start / content-end}

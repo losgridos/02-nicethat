@@ -6,7 +6,6 @@
   display: relative;
   grid-column: span 1;
   width: 100%;
-  // height: 56rem;
   padding-left: 1.5rem;
   padding-top: 5rem;
   padding-right: 1.5rem;
@@ -54,8 +53,7 @@
 // --------------------------------------------------
 .newsletter-form  {
   position: relative;
-  // height: 20rem;
-  font-family: "Roboto";
+  font-family: $font-title;
   margin-bottom: 2rem;
 }
 
@@ -211,7 +209,7 @@
 }
 
 .alert-feedback p {
-  font-family: 'Roboto', sans-serif;
+  font-family: $font-title;
   font-size: 1.5rem;
   font-weight: 400;
   color: $color-black;
