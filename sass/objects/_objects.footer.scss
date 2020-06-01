@@ -34,7 +34,7 @@
 
 .footer-grid ul {
   grid-column: content-start / content-end;
-  font-weight: 300;
+  font-weight: $font-weight-1;
   letter-spacing: .1rem;
   border-bottom: 1px solid $color-grey-dark;
 
@@ -103,8 +103,8 @@
 
 .footer-copyright {
   grid-column: content-start / content-end;
-  width: 400px;
-  font-weight: 300;
+  width: 40rem;
+  font-weight: $font-weight-1;
   font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: .1rem;

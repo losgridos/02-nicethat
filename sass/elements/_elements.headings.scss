@@ -5,7 +5,7 @@
 // <h1> is only the Logo
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
-  font-weight: 400;
+  font-weight: $font-weight-2;
   font-size: 3.5rem;
 }
 
@@ -15,14 +15,14 @@ h4,
 h5,
 h6 {
   font-family: $font-title;
-  font-weight: 300;
+  font-weight: $font-weight-1;
   letter-spacing: .5px;
   // color: $color-black;
 }
 
 p {
   font-family: $font-body;
-  font-weight: 300;
+  font-weight: $font-weight-1;
   color: $color-black;
 }
 

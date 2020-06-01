@@ -30,6 +30,7 @@ function initOnTop() {
   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
     // do nothing
   } else {
+    nav.classList.add('u-bg-white');
     nav.classList.remove('is-fixed');
     nav.classList.remove('nav-border');
     document.body.style.paddingTop = '0px';
