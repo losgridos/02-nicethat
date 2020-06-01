@@ -38,7 +38,7 @@
   padding-bottom: 1rem;
   font-size: 1.1rem;
   font-family: $font-title;
-  font-weight: 700;
+  font-weight: $font-weight-4;
   letter-spacing: .15rem;
   text-transform: uppercase;
   border: 2px solid $color-black;
@@ -47,7 +47,7 @@
 .banner-header {
   margin-top: 2rem;
   font-family: $font-title;
-  font-weight: 500;
+  font-weight: $font-weight-3;
   font-size: 3rem;
   line-height: 1.2;
   text-align: center;
@@ -55,7 +55,7 @@
 
 .banner-header--new {
   margin-top: .5rem;
-  font-weight: 300;
+  font-weight: $font-weight-1;
   font-size: 6rem;
   line-height: 1.1;
   letter-spacing: .2rem;
@@ -65,7 +65,7 @@
 .banner-content--new {
   padding-top: 2rem;
   font-family: $font-mono;
-  font-weight: 300;
+  font-weight: $font-weight-1;
   font-size: 1.8rem;
   color: $color-tertiary-3;
 }
@@ -74,7 +74,7 @@
   margin-top: 2rem;
   font-size: 1.1rem;
   font-family: $font-title;
-  font-weight: 700;
+  font-weight: $font-weight-4;
   letter-spacing: .05rem;
 }
 
