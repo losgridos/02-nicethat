@@ -38,12 +38,3 @@ body.addEventListener('click', hideAndShow);
 
 
 
-
-
-
-
-
-
-
-
-
