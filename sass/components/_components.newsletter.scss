@@ -72,7 +72,7 @@
 .newsletter-form input[type=text] {
   margin-bottom: 4rem;
   padding-left: 2rem;
-  font-size: 1.4rem;
+  font-size: $newsletter-fontsize-2;
   font-weight: $font-weight-1;
   letter-spacing: .5px;
   color: $color-black;
@@ -105,14 +105,14 @@
   position: absolute;
   top: .15rem;
   left: .5rem;
-  font-size: 1.4rem;
+  font-size: $newsletter-fontsize-2;
   color: $color-black;
   z-index: 1000;
 }
 
 // Checkbox Label
 .newsletter-form label {
-  font-size: 1.4rem;
+  font-size: $newsletter-fontsize-2;
   font-weight: $font-weight-2;
   letter-spacing: .5px;
   color: $color-black;
@@ -126,7 +126,7 @@
   padding-top: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: $newsletter-fontsize-2;
   letter-spacing: .5px;
   text-align: left;
   color: $color-black;
@@ -210,7 +210,7 @@
 
 .alert-feedback p {
   font-family: $font-title;
-  font-size: 1.5rem;
+  font-size: $newsletter-fontsize-3;
   font-weight: $font-weight-2;
   color: $color-black;
 }

@@ -52,9 +52,9 @@
 .footer-grid li {
   padding-top: .6rem;
   color: $color-white;
-  font-size: $footer-fontsize-m;
+  font-size: $footer-fontsize-2;
   line-height: 1.5;
-  @include respond(desktop) { font-size: $footer-fontsize-l; }
+  @include respond(desktop) { font-size: $footer-fontsize-3; }
 }
 
 .footer-grid a {
@@ -65,7 +65,7 @@
 .footer-grid li:first-of-type {
   padding-top: 2.5rem;
   padding-bottom: 1.5rem;
-  font-size: $footer-fontsize-m;
+  font-size: $footer-fontsize-2;
   color: $color-grey-dark;
 }
 
@@ -105,7 +105,7 @@
   grid-column: content-start / content-end;
   width: 40rem;
   font-weight: $font-weight-1;
-  font-size: $footer-fontsize-s;
+  font-size: $footer-fontsize-1;
   line-height: 1.2;
   letter-spacing: .1rem;
   font-family: $font-title;
