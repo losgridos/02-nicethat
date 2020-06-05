@@ -31,8 +31,8 @@ function initOnTop() {
     // do nothing
   } else {
     nav.classList.add('u-bg-white');
-    nav.classList.remove('is-fixed');
-    nav.classList.remove('nav-border');
+    nav.classList.remove('is-fixed', 'nav-border');
+    // nav.classList.remove('nav-border');
     document.body.style.paddingTop = '0px';
   }
 }

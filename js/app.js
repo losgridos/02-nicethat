@@ -1,71 +1,24 @@
 /////////////////////////
-// View Controller
+// Controller imports
 /////////////////////////
-
-let view = (function() {
-
-  const CSSClasses = {
-    isHidden: 'u-hidden',
-    showTagsBtn: '.js-tag-btn',
-  };
-
-  return {
-
-    displayTags: function(event) {
-      // if the click not macth with tagBtn, return
-      if (!event.target.matches(CSSClasses.showTagsBtn)) return;
-
-      let tagBtn = event.target.closest(CSSClasses.showTagsBtn);
-      // select all hidden tags elements inside the target
-      let arrayTags = Array.from(tagBtn.children);
-      // putting the tag elements before the tagBtn
-      // removing the class "u-hidden"
-      arrayTags.forEach(tag => {
-        tagBtn.before(tag);
-        tag.classList.remove(CSSClasses.isHidden);
-      });
-      // removing the tagBtn
-      tagBtn.remove();
-    },
-
-    getCSSClasses: function() {
-      return CSSClasses;
-    },
-
-  };
-
-})();
-
+import * as tagsView from './view/tagsView.js';
+import {elements} from './view/base.js';
 
 
 /////////////////////////
-// App Controller
+// Tags Controller
 /////////////////////////
 
-let app = (function(viewCtrl) {
+document.addEventListener('click', event => {
+  // if the click doesnt macht the css class, then return
+  if (!event.target.matches('.js-tag-btn')) return;
 
-  let setupEventListeners = function() {
-    const classes = viewCtrl.getCSSClasses();
+  // select the tagBtn event
+  const tagBtn = event.target.closest('.js-tag-btn');
 
-    // Show Tags Button
-    document.addEventListener('click', viewCtrl.displayTags);
-  }
+  Array.from(tagBtn.children).forEach(tag => {
+    tagsView.displayItem(tag, tagBtn);
+  });
 
-  return {
-    init: function() {
-      console.log('Application has started.');
-      setupEventListeners();
-    }
-  };
-
-})(view);
-
-app.init();
-
-
-
-
-
-
-
-
+  tagsView.deleteItem(tagBtn);
+});
