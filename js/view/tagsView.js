@@ -1,7 +1,6 @@
 /////////////////////////
 // Tags View
 /////////////////////////
-import { elements }  from './base.js';
 
 console.log("tagsView is connected");
 

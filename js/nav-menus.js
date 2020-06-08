@@ -1,6 +1,8 @@
 // Categories MENU
 /////////////////////
 
+const nav = document.querySelector('nav'); // will be change with elements.nav from base
+
 // click in categories >
 let categoriesBtn = document.querySelector('.navbar-categories');
 categoriesBtn.addEventListener('click', catMenuToggle);
