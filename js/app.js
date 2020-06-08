@@ -1,8 +1,11 @@
 /////////////////////////
 // Controller imports
 /////////////////////////
-import * as tagsView from './view/tagsView.js';
 import {elements} from './view/base.js';
+import * as tagsView from './view/tagsView.js';
+import * as navModel from './model/Nav.js';
+// import * as navView from './view/navView.js';
+
 
 
 /////////////////////////
@@ -22,3 +25,11 @@ document.addEventListener('click', event => {
 
   tagsView.deleteItem(tagBtn);
 });
+
+
+/////////////////////////
+// Nav Controller
+/////////////////////////
+
+window.addEventListener('scroll', navModel.checkPosition);
+window.addEventListener('scroll', navModel.initNav);

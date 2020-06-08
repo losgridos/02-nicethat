@@ -2,7 +2,7 @@
 console.log("base is connected");
 
 export const elements = {
-    // searchForm: document.querySelector('.search'),
+    nav: document.querySelector('nav'),
     // searchInput: document.querySelector('.search__field'),
     // searchRes: document.querySelector('.results'),
     // searchResList: document.querySelector('.results__list'),
