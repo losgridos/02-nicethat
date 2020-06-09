@@ -3,6 +3,7 @@ console.log("base is connected");
 
 export const elements = {
     nav: document.querySelector('nav'),
+    footerLogo: document.querySelector('.footer-icon'),
     // searchInput: document.querySelector('.search__field'),
     // searchRes: document.querySelector('.results'),
     // searchResList: document.querySelector('.results__list'),
