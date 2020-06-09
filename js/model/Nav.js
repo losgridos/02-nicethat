@@ -1,7 +1,5 @@
 import {elements} from '../view/base.js';
 import * as navView from '../view/navView.js';
-export {checkPosition, initNav};
-
 /////////////////
 
 console.log("nav model is connected");
@@ -28,4 +26,4 @@ function initNav() {
     navView.initNavPosition();
 }
 
-
+export {checkPosition, initNav};

@@ -4,6 +4,7 @@
 import {elements} from './view/base.js';
 import * as tagsView from './view/tagsView.js';
 import * as navModel from './model/Nav.js';
+import * as smoothModel from './model/SmoothScroll.js';
 // import * as navView from './view/navView.js';
 
 
@@ -33,3 +34,12 @@ document.addEventListener('click', event => {
 
 window.addEventListener('scroll', navModel.checkPosition);
 window.addEventListener('scroll', navModel.initNav);
+
+
+/////////////////////////
+// Footer Logo Smooth-Scroll Controller
+/////////////////////////
+
+elements.footerLogo.addEventListener('click', () => {
+  smoothModel.smoothScroll('body', 3000);
+});
