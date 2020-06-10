@@ -1,6 +1,7 @@
 import {elements} from '../view/base.js';
 import * as burgerView from '../view/navBurgerMenuView.js';
-/////////////////
+import * as navView from '../view/navView.js';
+/////////////////////
 
 
 // Burger MENU
@@ -19,24 +20,16 @@ export function burgerMenuToggle() {
 }
 
 
-function initNavBorder() {
-  // if the scrollTop of the body is in the start position, remove the navBorder
-  if ((!document.body.scrollTop > 0) && (!document.documentElement.scrollTop > 0)) {
-    burgerView.deleteNavBorder();
-  }
-}
-
-
-function navColorToggle() {
+export function navColorToggle() {
   burgerView.displayColorChange();
   // if catMenu is-visible, remove navBorder
   if (!elements.catMenu.classList.contains("u-hidden")) {
-    burgerView.deleteNavBorder();
+    navView.deleteNavBorder();
   } else {
     // if nav do not have a border when catMenu is hidden, add a border.
     if (!elements.nav.classList.contains("nav-border")) {
-      burgerView.addNavBorder();
+      navView.addNavBorder();
     }
-    initNavBorder();
+    navView.initNavBorder();
   }
 }
