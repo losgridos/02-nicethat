@@ -2,14 +2,11 @@
 console.log("base is connected");
 
 export const elements = {
-    nav: document.querySelector('nav'),
-    footerLogo: document.querySelector('.footer-icon'),
-    // searchInput: document.querySelector('.search__field'),
-    // searchRes: document.querySelector('.results'),
-    // searchResList: document.querySelector('.results__list'),
-    // searchResPages: document.querySelector('.results__pages'),
-    // recipe: document.querySelector('.recipe'),
-    // shopping: document.querySelector('.shopping__list'),
-    // likesMenu: document.querySelector('.likes__field'),
-    // likesList: document.querySelector('.likes__list')
+  nav: document.querySelector('nav'),
+  burgerIcon: document.querySelector('.burger-icon'),
+  burgerMenu: document.querySelector('.burger-menu-grid'),
+  catMenu: document.querySelector('.categories-menu'),
+  catIcon: document.querySelector('.navbar-categories-icon'),
+  catBgFreeze: document.querySelector('.categories-bg-freeze'),
+  footerLogo: document.querySelector('.footer-icon'),
 };

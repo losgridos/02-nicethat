@@ -5,6 +5,7 @@ import {elements} from './view/base.js';
 import * as tagsView from './view/tagsView.js';
 import * as navModel from './model/Nav.js';
 import * as smoothModel from './model/SmoothScroll.js';
+import * as navBurgerModel from './model/NavBurgerMenu.js';
 // import * as navView from './view/navView.js';
 
 
@@ -37,9 +38,19 @@ window.addEventListener('scroll', navModel.initNav);
 
 
 /////////////////////////
+// Nav / Burger Menu Controller
+/////////////////////////
+
+elements.burgerIcon.addEventListener('click', navBurgerModel.burgerMenuToggle);
+
+
+/////////////////////////
 // Footer Logo Smooth-Scroll Controller
 /////////////////////////
 
 elements.footerLogo.addEventListener('click', () => {
   smoothModel.smoothScroll('body', 3000);
 });
+
+
+
