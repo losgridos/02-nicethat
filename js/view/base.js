@@ -7,6 +7,7 @@ export const elements = {
   burgerMenu: document.querySelector('.burger-menu-grid'),
   catMenu: document.querySelector('.categories-menu'),
   catIcon: document.querySelector('.navbar-categories-icon'),
+  catBtn: document.querySelector('.navbar-categories'),
   catBgFreeze: document.querySelector('.categories-bg-freeze'),
   footerLogo: document.querySelector('.footer-icon'),
 };

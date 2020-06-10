@@ -6,6 +6,7 @@ import * as tagsView from './view/tagsView.js';
 import * as navModel from './model/Nav.js';
 import * as smoothModel from './model/SmoothScroll.js';
 import * as navBurgerModel from './model/NavBurgerMenu.js';
+import * as navCatModel from './model/NavCatMenu.js';
 // import * as navView from './view/navView.js';
 
 
@@ -32,16 +33,16 @@ document.addEventListener('click', event => {
 /////////////////////////
 // Nav Controller
 /////////////////////////
-
 window.addEventListener('scroll', navModel.checkPosition);
 window.addEventListener('scroll', navModel.initNav);
 
-
-/////////////////////////
 // Nav / Burger Menu Controller
-/////////////////////////
-
 elements.burgerIcon.addEventListener('click', navBurgerModel.burgerMenuToggle);
+
+// Nav / Categories Menu Controller
+elements.catBtn.addEventListener('click', navCatModel.catMenuToggle);
+
+document.body.addEventListener('click', navCatModel.outsideClose);
 
 
 /////////////////////////
