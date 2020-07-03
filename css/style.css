@@ -17,7 +17,11 @@ html {
 h1 {
   font-family: 'Pragati Narrow', sans-serif;
   font-weight: 400;
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  letter-spacing: -.8px; }
+  @media only screen and (min-width: 48.1em) {
+    h1 {
+      font-size: 4rem; } }
 
 h2,
 h3,
@@ -53,7 +57,7 @@ h3 {
   @media only screen and (min-width: 69em) {
     h3 {
       font-size: 2.5rem; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     h3 {
       font-size: 3rem;
       line-height: 4rem; } }
@@ -111,7 +115,7 @@ body {
   @media only screen and (min-width: 69em) {
     .grid {
       grid-template-columns: [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end] 1fr [full-end]; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .grid {
       grid-template-columns: [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end] 1fr [full-end]; } }
 
@@ -127,7 +131,7 @@ body {
   @media only screen and (min-width: 69em) {
     .categories-menu {
       grid-template-columns: 1fr 104rem 1fr; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .categories-menu {
       grid-template-columns: 1fr 137rem 1fr; } }
 
@@ -150,7 +154,7 @@ body {
   @media only screen and (min-width: 69em) {
     .burger-menu-grid {
       grid-template-columns: [full-start] 1fr [content-start] 107.5rem [content-end] 1fr [full-end]; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .burger-menu-grid {
       grid-template-columns: [full-start] 1fr [content-start] 140rem [content-end] 1fr [full-end]; } }
 
@@ -164,7 +168,7 @@ body {
   @media only screen and (min-width: 69em) {
     .article-grid-item {
       grid-template-columns: [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end]; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .article-grid-item {
       grid-template-columns: [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end] 1fr [full-end]; } }
 
@@ -236,7 +240,7 @@ body {
   @media only screen and (min-width: 69em) {
     .footer-grid {
       grid-template-columns: [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end] 1fr [full-end]; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .footer-grid {
       grid-template-columns: [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end] 1fr [full-end]; } }
 
@@ -311,7 +315,7 @@ nav.is-fixed {
   @media only screen and (min-width: 69em) {
     .slogan {
       margin-right: 5rem; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .slogan {
       margin-right: 9rem; } }
 
@@ -333,7 +337,7 @@ nav.is-fixed {
   outline: none;
   border: none;
   background-color: transparent; }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .input-search {
       width: 56rem; } }
 
@@ -476,7 +480,7 @@ nav.is-fixed {
   color: #ffffff; }
   .burger-menu a:hover a {
     color: #ffffff; }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .burger-menu a {
       font-size: 1.7rem;
       line-height: 2.4rem; } }
@@ -554,7 +558,7 @@ nav.is-fixed {
     .burger-menu-social-icon {
       padding-right: 1.5rem;
       font-size: 1.6rem; } }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .burger-menu-social-icon {
       padding-right: 1.8rem;
       font-size: 2rem; } }
@@ -706,7 +710,7 @@ nav.is-fixed {
   background-color: #ffffff;
   margin-bottom: 2rem; }
 
-@media only screen and (min-width: 71em) {
+@media only screen and (min-width: 91em) {
   .article-1-fix {
     grid-column: span 2; } }
 
@@ -725,7 +729,7 @@ nav.is-fixed {
   .article--selected {
     grid-column: span 2; } }
 
-@media only screen and (min-width: 71em) {
+@media only screen and (min-width: 91em) {
   .article--selected {
     grid-column: span 2; } }
 
@@ -739,7 +743,7 @@ nav.is-fixed {
     position: sticky;
     top: 0px; } }
 
-@media only screen and (min-width: 71em) {
+@media only screen and (min-width: 91em) {
   .article--selected-fixed {
     grid-column: span 4; } }
 
@@ -753,7 +757,7 @@ nav.is-fixed {
 
 .article-mt-fix {
   margin-top: -4rem; }
-  @media only screen and (min-width: 71em) {
+  @media only screen and (min-width: 91em) {
     .article-mt-fix {
       margin-top: -10.5rem; } }
 
