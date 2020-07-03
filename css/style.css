@@ -236,7 +236,7 @@ body {
   @media only screen and (min-width: 69em) {
     .footer-grid {
       grid-template-columns: [full-start] 1fr [content-start] 21.5rem [col2] 21.5rem [col3] 21.5rem [col4] 21.5rem [col5] 21.5rem [content-end] 1fr [full-end]; } }
-  @media only screen and (min-width: 69em) {
+  @media only screen and (min-width: 91em) {
     .footer-grid {
       grid-template-columns: [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end] 1fr [full-end]; } }
 
