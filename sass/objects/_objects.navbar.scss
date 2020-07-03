@@ -82,7 +82,8 @@ nav.is-fixed {
     display: block;
     margin-right: auto;
   }
-   @include respond(desktop) {margin-right: 5rem;}
+  @include respond(desktop) {margin-right: 5rem;}
+  @include respond(big-desktop) {margin-right: 9rem;}
 }
 
 // --------------------------------------------------
