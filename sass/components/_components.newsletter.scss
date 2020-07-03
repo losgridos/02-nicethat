@@ -27,9 +27,7 @@
   margin-bottom: 3.5rem;
 }
 
-.newsletter-img-container {
-  overflow: hidden;
-}
+.newsletter-img-container { overflow: hidden; }
 
 .newsletter-img {
   display: none;
@@ -46,6 +44,10 @@
   max-height: 60rem;
   object-fit: cover;
   transform: scale(1.26);
+}
+
+.newsletter-max-h {
+  max-height: 55rem;
 }
 
 
