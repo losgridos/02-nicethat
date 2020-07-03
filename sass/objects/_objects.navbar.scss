@@ -108,6 +108,10 @@ nav.is-fixed {
   outline: none;
   border:none;
   background-color: transparent;
+
+  @include respond(big-desktop) {
+    width: 56rem;
+  }
 }
 
 .input-search::placeholder {

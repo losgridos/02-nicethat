@@ -31,7 +31,7 @@ body {
 
   @include respond(big-desktop) { 
     grid-template-columns:
-    [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
+    [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end]
     1fr [full-end];
   }
 }
@@ -52,7 +52,7 @@ body {
     grid-template-columns: 1fr 104rem 1fr;
   }
   @include respond(big-desktop) {
-    grid-template-columns: 1fr 124rem 1fr;
+    grid-template-columns: 1fr 137rem 1fr;
   }
 }
 
@@ -72,7 +72,7 @@ body {
 
   @include respond(big-desktop) {
     grid-template-columns:
-    [full-start] 1fr [content-start] 127.5rem [content-end] 1fr [full-end];
+    [full-start] 1fr [content-start] 140rem [content-end] 1fr [full-end];
   }
 
   // Absolute Positioning all page
@@ -113,7 +113,7 @@ body {
 
   @include respond(big-desktop) { 
     grid-template-columns:
-    [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
+    [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end]
     1fr [full-end];
   }
 }
@@ -215,7 +215,7 @@ body {
 
   @include respond(big-desktop) {
     grid-template-columns:
-    [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
+    [full-start] 1fr [content-start] 28rem [col2] 28rem [col3] 28rem [col4] 28rem [col5] 28rem [content-end]
     1fr[full-end];
   }
 }
