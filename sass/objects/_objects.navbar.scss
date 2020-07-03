@@ -275,6 +275,12 @@ nav.is-fixed {
 .burger-menu a {
   color: $color-white;
     &:hover a { color: $color-white;}
+  
+  @include respond(big-desktop) { 
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+  }
+  
 }
 
 // <ul>
@@ -360,5 +366,10 @@ nav.is-fixed {
   @include respond(desktop) {
     padding-right: 1.5rem;
     font-size: 1.6rem;
+  }
+
+  @include respond(big-desktop) {
+    padding-right: 1.8rem;
+    font-size: 2rem;
   }
 }
