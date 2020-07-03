@@ -29,13 +29,11 @@ body {
     1fr [full-end];
   }
 
-  @include respond(big-desktop) { // make it a new media query
+  @include respond(big-desktop) { 
     grid-template-columns:
     [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
     1fr [full-end];
   }
-
-  // background-color: $color-white;
 }
 
 
@@ -56,22 +54,6 @@ body {
   @include respond(big-desktop) {
     grid-template-columns: 1fr 124rem 1fr;
   }
-
-  // grid-template-columns: 3rem 1fr 3rem;
-
-  // @include respond(tablet) {
-  //   grid-template-columns:
-  //   [full-start] 3rem [content-start] 1fr [col2] 1fr [content-end] 3rem [full-end];
-  // }
-  // @include respond(desktop) {
-  //   grid-template-columns:
-  //   [full-start] 1fr [content-start] 107.5rem [content-end] 1fr [full-end];
-  // }
-
-  // @include respond(big-desktop) {
-  //   grid-template-columns:
-  //   [full-start] 1fr [content-start] 104rem [content-end] 1fr [full-end];
-  // }
 }
 
 .burger-menu-grid {
@@ -103,8 +85,6 @@ body {
   overflow-x: hidden;
   padding-top: 11rem; // acthung here! burger icon toggle, sonnst 9rem;
   transition: 0.5s;
-  // Works!
-
   background-color: $color-primary;
 
   // on-off
@@ -136,8 +116,6 @@ body {
     [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
     1fr [full-end];
   }
-
-
 }
 
 // Full Width Container / Newsletter
@@ -191,11 +169,6 @@ body {
     grid-template-columns:
     [full-start] 1fr [content-start] 98rem [content-end] 1fr [full-end];
   }
-
-  // @include respond(big-desktop) {
-  //   grid-template-columns:
-  //   [full-start] 1fr [content-start] 118rem [content-end] 1fr [full-end];
-  // }
 }
 
 .banner-full-width-container:before,
@@ -240,7 +213,7 @@ body {
     1fr[full-end];
   }
 
-  @include respond(desktop) {
+  @include respond(big-desktop) {
     grid-template-columns:
     [full-start] 1fr [content-start] 25.5rem [col2] 25.5rem [col3] 25.5rem [col4] 25.5rem [col5] 25.5rem [content-end]
     1fr[full-end];
